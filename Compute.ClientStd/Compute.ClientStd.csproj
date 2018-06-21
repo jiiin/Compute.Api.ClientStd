@@ -5,6 +5,12 @@
     <AssemblyName>DD.CBU.Compute.Api.ClientStd</AssemblyName>
     <RootNamespace>DD.CBU.Compute.Api.ClientStd</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Jin Fang</Authors>
+    <Company>Dimension Data</Company>
+    <Product>Dimension Data Compute Client API</Product>
+    <Description>Provides a client to fully manage the CaaS including deploying machines, managing backups etc. Original package in .net 4.6.1 https://www.nuget.org/packages/DD.CBU.Compute.Api.Client/</Description>
+    <PackageProjectUrl>https://github.com/jiiin/Compute.Api.ClientStd</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jiiin/Compute.Api.ClientStd</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
