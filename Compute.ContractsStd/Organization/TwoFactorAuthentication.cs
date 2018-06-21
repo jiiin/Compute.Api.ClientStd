@@ -1,0 +1,32 @@
+﻿using DD.CBU.Compute.Api.ContractsStd.Software;
+
+namespace DD.CBU.Compute.Api.ContractsStd.Organization
+{
+    using System.Xml;
+    using System.Xml.Serialization;
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://oec.api.opsource.net/schemas/organization")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://oec.api.opsource.net/schemas/organization", IsNullable = false)]
+    public partial class TwoFactorAuthentication
+    {
+
+        private bool enabled;
+
+        [XmlText]
+        public bool Enabled
+        {
+            get
+            {
+                return this.enabled;
+            }
+            set
+            {
+                this.enabled = value;
+            }
+        }
+    }
+}
