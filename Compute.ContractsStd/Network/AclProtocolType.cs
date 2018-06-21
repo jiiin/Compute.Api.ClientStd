@@ -1,4 +1,4 @@
-namespace DD.CBU.Compute.Api.ContractsStd.Network
+namespace DD.CBU.Compute.Api.Contracts.Network
 {
     /// <summary>
     /// All the ACL Protocol types.

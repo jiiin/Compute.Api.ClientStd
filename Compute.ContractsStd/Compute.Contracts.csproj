@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>DD.CBU.Compute.Api.ContractsStd</AssemblyName>
+    <AssemblyName>DD.CBU.Compute.Api.Contracts</AssemblyName>
     <RootNamespace>DD.CBU.Compute.Api.ContractsStd</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Jin Fang</Authors>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Server
+namespace DD.CBU.Compute.Api.Contracts.Server
 {
 	/// <summary>
 	///		Provides read-only access to information about a deployed CaaS image (with labels for its included software).

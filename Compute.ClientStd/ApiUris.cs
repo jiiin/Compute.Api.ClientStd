@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System.Text;
 
-namespace DD.CBU.Compute.Api.ClientStd
+namespace DD.CBU.Compute.Api.Client
 {
     using System;
     using System.Collections.Generic;

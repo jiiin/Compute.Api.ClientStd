@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Requests.Network20
+namespace DD.CBU.Compute.Api.Contracts.Requests.Network20
 {
     /// <summary>
     /// The Virtal Listener List Options type.

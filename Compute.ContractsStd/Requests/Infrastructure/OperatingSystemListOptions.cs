@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Requests.Infrastructure
+﻿namespace DD.CBU.Compute.Api.Contracts.Requests.Infrastructure
 {
     /// <summary>
     /// Filtering options for the operating system request.

@@ -1,18 +1,18 @@
-﻿using DD.CBU.Compute.Api.ContractsStd.Network20;
-using DD.CBU.Compute.Api.ContractsStd.Requests.Account20;
+﻿using DD.CBU.Compute.Api.Contracts.Network20;
+using DD.CBU.Compute.Api.Contracts.Requests.Account20;
 
-namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Account
+namespace DD.CBU.Compute.Api.Client.Interfaces.Account
 {
     using System;
     using System.Collections.Generic;
 	using System.Threading.Tasks;
 
-	using DD.CBU.Compute.Api.ContractsStd.Datacenter;
-	using DD.CBU.Compute.Api.ContractsStd.Directory;
-	using DD.CBU.Compute.Api.ContractsStd.General;
-    using DD.CBU.Compute.Api.ContractsStd.Organization;
-    using DD.CBU.Compute.Api.ContractsStd.Requests;
-    using DD.CBU.Compute.Api.ContractsStd.Software;
+	using DD.CBU.Compute.Api.Contracts.Datacenter;
+	using DD.CBU.Compute.Api.Contracts.Directory;
+	using DD.CBU.Compute.Api.Contracts.General;
+    using DD.CBU.Compute.Api.Contracts.Organization;
+    using DD.CBU.Compute.Api.Contracts.Requests;
+    using DD.CBU.Compute.Api.Contracts.Software;
 
 	/// <summary>
 	/// The AccountAccessor interface.

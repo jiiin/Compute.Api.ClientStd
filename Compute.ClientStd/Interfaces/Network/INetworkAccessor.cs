@@ -1,11 +1,11 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Network
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Network
 {
 	using System.Collections.Generic;
 	using System.Net;
 	using System.Threading.Tasks;
 
-	using DD.CBU.Compute.Api.ContractsStd.General;
-	using DD.CBU.Compute.Api.ContractsStd.Network;
+	using DD.CBU.Compute.Api.Contracts.General;
+	using DD.CBU.Compute.Api.Contracts.Network;
 
 	/// <summary>
 	/// The Network interface.

@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Backup
+﻿namespace DD.CBU.Compute.Api.Contracts.Backup
 {
     using System;
     using System.Xml.Serialization;

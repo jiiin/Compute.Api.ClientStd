@@ -1,14 +1,14 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.ImportExportImages
+﻿namespace DD.CBU.Compute.Api.Client.ImportExportImages
 {
     using System;
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
 
-	using DD.CBU.Compute.Api.ClientStd.Interfaces;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.ImportExportImages;
-    using DD.CBU.Compute.Api.ContractsStd.General;
-	using DD.CBU.Compute.Api.ContractsStd.Image;
-	using DD.CBU.Compute.Api.ContractsStd.Server;
+	using DD.CBU.Compute.Api.Client.Interfaces;
+	using DD.CBU.Compute.Api.Client.Interfaces.ImportExportImages;
+    using DD.CBU.Compute.Api.Contracts.General;
+	using DD.CBU.Compute.Api.Contracts.Image;
+	using DD.CBU.Compute.Api.Contracts.Server;
 
 	/// <summary>
 	/// The import export customer image accessor.

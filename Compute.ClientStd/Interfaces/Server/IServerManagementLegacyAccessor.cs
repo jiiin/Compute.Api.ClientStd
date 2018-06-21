@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Server
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Server
 {
 	/// <summary>
 	/// The ServerManagementLegacyAccessor interface.

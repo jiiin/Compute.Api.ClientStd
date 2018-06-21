@@ -1,15 +1,15 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Server
+﻿namespace DD.CBU.Compute.Api.Client.Server
 {
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
 
-	using DD.CBU.Compute.Api.ClientStd.Interfaces;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.Server;
-	using DD.CBU.Compute.Api.ContractsStd.General;
-	using DD.CBU.Compute.Api.ContractsStd.Requests;
-	using DD.CBU.Compute.Api.ContractsStd.Requests.Server;
-	using DD.CBU.Compute.Api.ContractsStd.Server;
-	using DD.CBU.Compute.Api.ContractsStd.Server10;
+	using DD.CBU.Compute.Api.Client.Interfaces;
+	using DD.CBU.Compute.Api.Client.Interfaces.Server;
+	using DD.CBU.Compute.Api.Contracts.General;
+	using DD.CBU.Compute.Api.Contracts.Requests;
+	using DD.CBU.Compute.Api.Contracts.Requests.Server;
+	using DD.CBU.Compute.Api.Contracts.Server;
+	using DD.CBU.Compute.Api.Contracts.Server10;
 
 	/// <summary>
 	/// The server accessor.

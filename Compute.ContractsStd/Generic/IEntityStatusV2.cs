@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Generic
+﻿namespace DD.CBU.Compute.Api.Contracts.Generic
 {
     /// <summary>
     /// An entity in the MCP2.0 API that has a status.

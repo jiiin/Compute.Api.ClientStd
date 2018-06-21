@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Requests.Account20
+﻿namespace DD.CBU.Compute.Api.Contracts.Requests.Account20
 {
     /// <summary>
     /// Filtering options for the user request.

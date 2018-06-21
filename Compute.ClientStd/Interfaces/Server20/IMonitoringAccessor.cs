@@ -1,9 +1,9 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Server20
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Server20
 {
     using System;
     using System.Threading.Tasks;
 
-    using DD.CBU.Compute.Api.ContractsStd.Network20;
+    using DD.CBU.Compute.Api.Contracts.Network20;
 
     /// <summary>
     /// The Monitoring Accessor interface.

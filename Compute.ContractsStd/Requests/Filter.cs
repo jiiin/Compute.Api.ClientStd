@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Requests
+namespace DD.CBU.Compute.Api.Contracts.Requests
 {
     /// <summary>
     /// A single request filter.

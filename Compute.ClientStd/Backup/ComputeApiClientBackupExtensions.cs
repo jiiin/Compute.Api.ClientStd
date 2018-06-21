@@ -7,14 +7,14 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace DD.CBU.Compute.Api.ClientStd.Backup
+namespace DD.CBU.Compute.Api.Client.Backup
 {
 	using System;
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces;
-	using DD.CBU.Compute.Api.ContractsStd.Backup;
-	using DD.CBU.Compute.Api.ContractsStd.General;
+	using DD.CBU.Compute.Api.Client.Interfaces;
+	using DD.CBU.Compute.Api.Contracts.Backup;
+	using DD.CBU.Compute.Api.Contracts.General;
 
 	/// <summary>
 	/// Extension methods for the backup section of the CaaS API.

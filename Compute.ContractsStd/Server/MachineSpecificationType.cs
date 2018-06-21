@@ -1,4 +1,4 @@
-namespace DD.CBU.Compute.Api.ContractsStd.Server
+namespace DD.CBU.Compute.Api.Contracts.Server
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
@@ -16,7 +16,7 @@ namespace DD.CBU.Compute.Api.ContractsStd.Server
     
         private int additionalLocalStorageGbField;
     
-        private global::DD.CBU.Compute.Api.ContractsStd.Server.OperatingSystemType operatingSystemField;
+        private global::DD.CBU.Compute.Api.Contracts.Server.OperatingSystemType operatingSystemField;
     
         /// <remarks/>
         public int cpuCount {
@@ -59,7 +59,7 @@ namespace DD.CBU.Compute.Api.ContractsStd.Server
         }
     
         /// <remarks/>
-        public global::DD.CBU.Compute.Api.ContractsStd.Server.OperatingSystemType operatingSystem {
+        public global::DD.CBU.Compute.Api.Contracts.Server.OperatingSystemType operatingSystem {
             get {
                 return this.operatingSystemField;
             }

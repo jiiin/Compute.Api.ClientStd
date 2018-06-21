@@ -1,8 +1,8 @@
-﻿using DD.CBU.Compute.Api.ContractsStd.Network20;
-using DD.CBU.Compute.Api.ContractsStd.Requests;
-using DD.CBU.Compute.Api.ContractsStd.Requests.Network20;
+﻿using DD.CBU.Compute.Api.Contracts.Network20;
+using DD.CBU.Compute.Api.Contracts.Requests;
+using DD.CBU.Compute.Api.Contracts.Requests.Network20;
 
-namespace DD.CBU.Compute.Api.ClientStd.Network20
+namespace DD.CBU.Compute.Api.Client.Network20
 {
     using System;
     using System.Collections.Generic;

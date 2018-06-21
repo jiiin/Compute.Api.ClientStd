@@ -1,7 +1,7 @@
-﻿using DD.CBU.Compute.Api.ContractsStd.General;
-using DD.CBU.Compute.Api.ContractsStd.Network20;
+﻿using DD.CBU.Compute.Api.Contracts.General;
+using DD.CBU.Compute.Api.Contracts.Network20;
 
-namespace DD.CBU.Compute.Api.ClientStd.Exceptions
+namespace DD.CBU.Compute.Api.Client.Exceptions
 {
 	using System;
 	using System.Runtime.Serialization;

@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Server
+namespace DD.CBU.Compute.Api.Contracts.Server
 {
 	/// <summary>
 	///		Represents a well-known operating system for CaaS virtual machines.

@@ -1,17 +1,17 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Network20
+﻿namespace DD.CBU.Compute.Api.Client.Network20
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using ContractsStd.General;
-    using ContractsStd.Network20;
-    using ContractsStd.Requests;
-    using ContractsStd.Requests.Network20;
+    using Contracts.General;
+    using Contracts.Network20;
+    using Contracts.Requests;
+    using Contracts.Requests.Network20;
     using Interfaces;
     using Interfaces.Network20;
 
     /// <summary>	An IP address management client. </summary>
-    /// <seealso cref="T:DD.CBU.Compute.Api.ClientStd.Interfaces.IIpam"/>
+    /// <seealso cref="T:DD.CBU.Compute.Api.Client.Interfaces.IIpam"/>
     public class IpAddressAccessor : IIpAddressAccessor
     {
         /// <summary>	The client. </summary>
@@ -27,7 +27,7 @@
         /// <summary>	Adds a public IP block. </summary>
         /// <param name="networkDomainId">	Identifier for the network domain. </param>
         /// <returns>	The job from the API; </returns>
-        /// <seealso cref="M:DD.CBU.Compute.Api.ClientStd.Interfaces.IIpam.AddPublicIpBlock(string)"/>
+        /// <seealso cref="M:DD.CBU.Compute.Api.Client.Interfaces.IIpam.AddPublicIpBlock(string)"/>
         public async Task<ResponseType> AddPublicIpBlock(Guid networkDomainId)
         {
             return
@@ -43,7 +43,7 @@
         /// <summary>	Gets public IP blocks. </summary>
         /// <param name="networkDomainId">	Identifier for the network domain. </param>
         /// <returns>	The public IP blocks. </returns>
-        /// <seealso cref="M:DD.CBU.Compute.Api.ClientStd.Interfaces.IIpam.GetPublicIpBlocks(string,IPageableRequest)"/>
+        /// <seealso cref="M:DD.CBU.Compute.Api.Client.Interfaces.IIpam.GetPublicIpBlocks(string,IPageableRequest)"/>
         public async Task<IEnumerable<PublicIpBlockType>> GetPublicIpBlocks(Guid networkDomainId)
         {
             var response = await GetPublicIpBlocksPaginated(networkDomainId, null);
@@ -193,7 +193,7 @@
         /// <param name="networkDomainId">	Identifier for the network domain. </param>
         /// <param name="publicIpBlockId">	Identifier for the public IP block. </param>
         /// <returns>	The job from the API; </returns>
-        /// <seealso cref="M:DD.CBU.Compute.Api.ClientStd.Interfaces.IIpam.DeletePublicIpBlock(string,string)"/>
+        /// <seealso cref="M:DD.CBU.Compute.Api.Client.Interfaces.IIpam.DeletePublicIpBlock(string,string)"/>
         public async Task<ResponseType> DeletePublicIpBlock(Guid networkDomainId, Guid publicIpBlockId)
         {
             return

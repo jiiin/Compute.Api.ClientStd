@@ -1,14 +1,14 @@
 ﻿using System;
-using DD.CBU.Compute.Api.ContractsStd.Requests.Network20;
+using DD.CBU.Compute.Api.Contracts.Requests.Network20;
 
-namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Network20
+namespace DD.CBU.Compute.Api.Client.Interfaces.Network20
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using DD.CBU.Compute.Api.ContractsStd.General;
-    using DD.CBU.Compute.Api.ContractsStd.Network20;
-    using DD.CBU.Compute.Api.ContractsStd.Requests;
+    using DD.CBU.Compute.Api.Contracts.General;
+    using DD.CBU.Compute.Api.Contracts.Network20;
+    using DD.CBU.Compute.Api.Contracts.Requests;
 
     /// <summary>	IP Address Management functions. </summary>
     public interface IIpAddressAccessor

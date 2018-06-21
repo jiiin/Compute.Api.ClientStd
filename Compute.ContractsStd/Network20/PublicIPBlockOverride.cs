@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Network20
+namespace DD.CBU.Compute.Api.Contracts.Network20
 {
     public partial class PublicIpBlockType
     {

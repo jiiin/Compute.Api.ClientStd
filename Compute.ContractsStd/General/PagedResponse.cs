@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DD.CBU.Compute.Api.ContractsStd.General
+namespace DD.CBU.Compute.Api.Contracts.General
 {
     /// <summary>
     /// Wrapper classe for pages result collection.

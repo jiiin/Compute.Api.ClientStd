@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Server
+namespace DD.CBU.Compute.Api.Contracts.Server
 {
     public enum DiskSpeedType
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Datacenter
+namespace DD.CBU.Compute.Api.Contracts.Datacenter
 {
 	/// <summary>
 	///		Represents CaaS data centre with disk speed details.

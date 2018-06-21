@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Network20
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Network20
 {
 	/// <summary>	Interface for networking 2.0 API. </summary>
 	public interface INetworkingAccessor

@@ -1,9 +1,9 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Utilities
+﻿namespace DD.CBU.Compute.Api.Client.Utilities
 {
     using System;
     using System.Linq;
 
-    using DD.CBU.Compute.Api.ContractsStd.Requests;
+    using DD.CBU.Compute.Api.Contracts.Requests;
 
     /// <summary>
     /// Provides utility methods to append filtering options to URIs.

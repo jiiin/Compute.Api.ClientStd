@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Requests.Drs
+﻿namespace DD.CBU.Compute.Api.Contracts.Requests.Drs
 {
     using System;
 

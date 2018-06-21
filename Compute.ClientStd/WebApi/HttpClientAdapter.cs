@@ -1,11 +1,11 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.WebApi
+﻿namespace DD.CBU.Compute.Api.Client.WebApi
 {
 	using System;
 	using System.Net.Http;
 	using System.Threading.Tasks;
 
-	using DD.CBU.Compute.Api.ClientStd.Interfaces;
-	using DD.CBU.Compute.Api.ClientStd.Utilities;
+	using DD.CBU.Compute.Api.Client.Interfaces;
+	using DD.CBU.Compute.Api.Client.Utilities;
 
 	/// <summary>
 	/// The http client adapter.

@@ -1,6 +1,6 @@
-﻿using DD.CBU.Compute.Api.ContractsStd.Software;
+﻿using DD.CBU.Compute.Api.Contracts.Software;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Organization
+namespace DD.CBU.Compute.Api.Contracts.Organization
 {
     using System.Xml;
     using System.Xml.Serialization;

@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Directory
+﻿namespace DD.CBU.Compute.Api.Contracts.Directory
 {
     /// <summary>
     /// The accounts

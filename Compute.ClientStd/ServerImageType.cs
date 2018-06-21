@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace DD.CBU.Compute.Api.ClientStd
+namespace DD.CBU.Compute.Api.Client
 {
 	/// <summary>
 	/// The server image type.

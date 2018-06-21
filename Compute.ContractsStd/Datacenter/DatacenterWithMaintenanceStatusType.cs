@@ -1,7 +1,7 @@
-using DD.CBU.Compute.Api.ContractsStd.Backup;
-using DD.CBU.Compute.Api.ContractsStd.Network;
+using DD.CBU.Compute.Api.Contracts.Backup;
+using DD.CBU.Compute.Api.Contracts.Network;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Datacenter
+namespace DD.CBU.Compute.Api.Contracts.Datacenter
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]

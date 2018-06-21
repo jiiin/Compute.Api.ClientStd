@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Directory
+namespace DD.CBU.Compute.Api.Contracts.Directory
 {
 	/// <summary>
 	///		Represents a role in the CaaS API.

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Requests.Server20
+namespace DD.CBU.Compute.Api.Contracts.Requests.Server20
 {
     /// <summary>
     /// Filtering options for the get customer image export in progress request.

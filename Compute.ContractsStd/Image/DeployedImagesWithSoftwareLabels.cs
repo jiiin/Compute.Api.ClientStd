@@ -1,4 +1,4 @@
-namespace DD.CBU.Compute.Api.ContractsStd.Image
+namespace DD.CBU.Compute.Api.Contracts.Image
 {
     /// <summary />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]

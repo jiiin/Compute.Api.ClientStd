@@ -1,6 +1,6 @@
 ﻿// ReSharper disable once CheckNamespace
 // Backwards compatibility
-namespace DD.CBU.Compute.Api.ClientStd
+namespace DD.CBU.Compute.Api.Client
 {
 	using System;
 	using System.Runtime.Serialization;

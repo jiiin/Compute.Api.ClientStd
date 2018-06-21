@@ -1,12 +1,12 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Network
+﻿namespace DD.CBU.Compute.Api.Client.Network
 {
 	using System;
 	using System.Collections.Generic;
 	using System.Net;
 	using System.Threading.Tasks;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces;
-	using DD.CBU.Compute.Api.ContractsStd.General;
-	using DD.CBU.Compute.Api.ContractsStd.Network;
+	using DD.CBU.Compute.Api.Client.Interfaces;
+	using DD.CBU.Compute.Api.Contracts.General;
+	using DD.CBU.Compute.Api.Contracts.Network;
 
 	/// <summary>
 	/// Extension methods for the Network section of the CaaS API.

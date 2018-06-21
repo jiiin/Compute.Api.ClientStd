@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Requests.Tagging
+﻿namespace DD.CBU.Compute.Api.Contracts.Requests.Tagging
 {
     using System;
 

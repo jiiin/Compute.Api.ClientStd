@@ -14,7 +14,7 @@ using System.Globalization;
 using System.Linq;
 using System.Net;
 
-namespace DD.CBU.Compute.Api.ClientStd
+namespace DD.CBU.Compute.Api.Client
 {
 	/// <summary>
 	/// The string extensions.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Vip
+namespace DD.CBU.Compute.Api.Contracts.Vip
 {
     public enum PersistenceProfileCookieType
     {

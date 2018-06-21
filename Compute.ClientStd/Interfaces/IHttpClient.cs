@@ -13,7 +13,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace DD.CBU.Compute.Api.ClientStd.Interfaces
+namespace DD.CBU.Compute.Api.Client.Interfaces
 {
 	/// <summary>
 	/// Represents a type that can make HttpClient calls.

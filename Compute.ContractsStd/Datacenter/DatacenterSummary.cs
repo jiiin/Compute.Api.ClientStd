@@ -1,7 +1,7 @@
 ﻿using System.Xml.Schema;
 using System.Xml.Serialization;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Datacenter
+namespace DD.CBU.Compute.Api.Contracts.Datacenter
 {
 	/// <summary>
 	///		Represents summary information about a CaaS data centre.

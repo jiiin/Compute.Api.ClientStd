@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Requests
+﻿namespace DD.CBU.Compute.Api.Contracts.Requests
 {
     /// <summary>
     /// The filter operator.

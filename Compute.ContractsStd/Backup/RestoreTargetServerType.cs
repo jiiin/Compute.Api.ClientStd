@@ -1,7 +1,7 @@
 using System;
-using DD.CBU.Compute.Api.ContractsStd.Server;
+using DD.CBU.Compute.Api.Contracts.Server;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Backup
+namespace DD.CBU.Compute.Api.Contracts.Backup
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]

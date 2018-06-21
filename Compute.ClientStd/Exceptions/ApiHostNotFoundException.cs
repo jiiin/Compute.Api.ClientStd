@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Exceptions
+﻿namespace DD.CBU.Compute.Api.Client.Exceptions
 {
 	using System;
 	using System.Runtime.Serialization;

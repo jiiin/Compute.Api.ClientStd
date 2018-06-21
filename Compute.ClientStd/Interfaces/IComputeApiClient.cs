@@ -1,10 +1,10 @@
-namespace DD.CBU.Compute.Api.ClientStd.Interfaces
+namespace DD.CBU.Compute.Api.Client.Interfaces
 {
     using System;
     using System.Threading.Tasks;
     using Account;
     using Backup;
-    using ContractsStd.Directory;
+    using Contracts.Directory;
     using Drs;
     using ImportExportImages;
     using Infrastructure;

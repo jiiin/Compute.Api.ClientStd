@@ -1,6 +1,6 @@
-﻿using DD.CBU.Compute.Api.ContractsStd.Generic;
+﻿using DD.CBU.Compute.Api.Contracts.Generic;
 
-namespace DD.CBU.Compute.Api.ContractsStd
+namespace DD.CBU.Compute.Api.Contracts
 {
     namespace Network20
     {

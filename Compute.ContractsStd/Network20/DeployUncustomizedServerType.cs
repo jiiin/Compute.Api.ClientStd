@@ -1,4 +1,4 @@
-namespace DD.CBU.Compute.Api.ContractsStd.Server
+namespace DD.CBU.Compute.Api.Contracts.Server
 {
     using Network20;
 

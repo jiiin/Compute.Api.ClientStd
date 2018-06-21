@@ -13,9 +13,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DD.CBU.Compute.Api.ClientStd
+namespace DD.CBU.Compute.Api.Client
 {
-	using DD.CBU.Compute.Api.ClientStd.Exceptions;
+	using DD.CBU.Compute.Api.Client.Exceptions;
 
 	/// <summary>	Values that represent known API regions. </summary> 
 	/// <remarks>GeoKey represents the geokey value returned by multigeo call</remarks>	   
@@ -143,7 +143,7 @@ namespace DD.CBU.Compute.Api.ClientStd
         /// </summary>
         private static KnownApiUri _instance;
 
-        /// <summary> Prevents a default instance of the DD.CBU.Compute.Api.ClientStd.KnownApiUri class from
+        /// <summary> Prevents a default instance of the DD.CBU.Compute.Api.Client.KnownApiUri class from
         /// 	being created. </summary>
         /// <remarks>	Anthony, 4/24/2015. </remarks>
         private KnownApiUri()

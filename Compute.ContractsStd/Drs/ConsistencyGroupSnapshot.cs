@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DD.CBU.Compute.Api.ContractsStd.Drs
+namespace DD.CBU.Compute.Api.Contracts.Drs
 {
     using System.Xml.Serialization;
-    using DD.CBU.Compute.Api.ContractsStd.Network20;
+    using DD.CBU.Compute.Api.Contracts.Network20;
 
 	/// 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34283")]

@@ -1,14 +1,14 @@
 ﻿using System;
-using DD.CBU.Compute.Api.ContractsStd.Server;
-using ServerType = DD.CBU.Compute.Api.ContractsStd.Network20.ServerType;
+using DD.CBU.Compute.Api.Contracts.Server;
+using ServerType = DD.CBU.Compute.Api.Contracts.Network20.ServerType;
 
-namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Backup
+namespace DD.CBU.Compute.Api.Client.Interfaces.Backup
 {
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
 
-	using ContractsStd.Backup;
-	using ContractsStd.General;
+	using Contracts.Backup;
+	using Contracts.General;
 
 	/// <summary>
 	/// The BackupAccessor interface.

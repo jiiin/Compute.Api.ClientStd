@@ -1,14 +1,14 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Server20
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Server20
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using ContractsStd.General;
-    using ContractsStd.Network20;
-    using ContractsStd.Requests;
-    using ContractsStd.Requests.Server20;
-    using ContractsStd.Server;
-    using ServerType = ContractsStd.Network20.ServerType;
+    using Contracts.General;
+    using Contracts.Network20;
+    using Contracts.Requests;
+    using Contracts.Requests.Server20;
+    using Contracts.Server;
+    using ServerType = Contracts.Network20.ServerType;
 
     /// <summary>
     /// The ServerAccessor interface.

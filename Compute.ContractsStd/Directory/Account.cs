@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Directory
+namespace DD.CBU.Compute.Api.Contracts.Directory
 {
 	/// <summary>
 	///		Represents a CaaS user account.

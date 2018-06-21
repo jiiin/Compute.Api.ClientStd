@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Image
+﻿namespace DD.CBU.Compute.Api.Contracts.Image
 {
     // 
     // ATTENTION: File has been modified manually to use correct types (integer instead of string).

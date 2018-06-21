@@ -1,12 +1,12 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Tagging
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Tagging
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using ContractsStd.General;
-    using ContractsStd.Network20;
-    using ContractsStd.Requests;
-    using ContractsStd.Requests.Tagging;
+    using Contracts.General;
+    using Contracts.Network20;
+    using Contracts.Requests;
+    using Contracts.Requests.Tagging;
 
     /// <summary>The TaggingAccessor interface.</summary>
     public interface ITaggingAccessor

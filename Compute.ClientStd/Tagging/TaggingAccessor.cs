@@ -1,12 +1,12 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Tagging
+﻿namespace DD.CBU.Compute.Api.Client.Tagging
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using ContractsStd.General;
-    using ContractsStd.Network20;
-    using ContractsStd.Requests;
-    using ContractsStd.Requests.Tagging;
+    using Contracts.General;
+    using Contracts.Network20;
+    using Contracts.Requests;
+    using Contracts.Requests.Tagging;
     using Interfaces;
     using Interfaces.Tagging;
 

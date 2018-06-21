@@ -1,13 +1,13 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Network
+﻿namespace DD.CBU.Compute.Api.Client.Network
 {
 	using System.Collections.Generic;
 	using System.Globalization;
 	using System.Threading.Tasks;
 
-	using DD.CBU.Compute.Api.ClientStd.Interfaces;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.Network;
-	using DD.CBU.Compute.Api.ContractsStd.General;
-	using DD.CBU.Compute.Api.ContractsStd.Vip;
+	using DD.CBU.Compute.Api.Client.Interfaces;
+	using DD.CBU.Compute.Api.Client.Interfaces.Network;
+	using DD.CBU.Compute.Api.Contracts.General;
+	using DD.CBU.Compute.Api.Contracts.Vip;
 
 	/// <summary>
 	/// The vip.
@@ -776,7 +776,7 @@
 		/// <returns>
 		/// The <see cref="Task"/>.
 		/// </returns>
-		public async Task<IEnumerable<ContractsStd.Vip.Vip>> GetVips(string networkId)
+		public async Task<IEnumerable<Contracts.Vip.Vip>> GetVips(string networkId)
 		{
 			Vips vips =
 				await

@@ -1,6 +1,6 @@
-﻿using DD.CBU.Compute.Api.ContractsStd.General;
+﻿using DD.CBU.Compute.Api.Contracts.General;
 
-namespace DD.CBU.Compute.Api.ClientStd
+namespace DD.CBU.Compute.Api.Client
 {
 	/// <summary>	The status extensions. </summary>
 	public static class StatusExtensions

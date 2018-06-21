@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Server20
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Server20
 {
 	/// <summary>
 	/// The ServerManagementAccessor interface.

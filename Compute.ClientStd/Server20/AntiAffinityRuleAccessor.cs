@@ -1,15 +1,15 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Server20
+﻿namespace DD.CBU.Compute.Api.Client.Server20
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using DD.CBU.Compute.Api.ClientStd.Interfaces;
-    using DD.CBU.Compute.Api.ClientStd.Interfaces.Server20;
-    using DD.CBU.Compute.Api.ContractsStd.General;
-    using DD.CBU.Compute.Api.ContractsStd.Network20;
-    using DD.CBU.Compute.Api.ContractsStd.Requests;
-    using DD.CBU.Compute.Api.ContractsStd.Requests.Server20;
+    using DD.CBU.Compute.Api.Client.Interfaces;
+    using DD.CBU.Compute.Api.Client.Interfaces.Server20;
+    using DD.CBU.Compute.Api.Contracts.General;
+    using DD.CBU.Compute.Api.Contracts.Network20;
+    using DD.CBU.Compute.Api.Contracts.Requests;
+    using DD.CBU.Compute.Api.Contracts.Requests.Server20;
 
     /// <summary>
     /// The server 2.0 accessor.

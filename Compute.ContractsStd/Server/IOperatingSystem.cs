@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Server
+﻿namespace DD.CBU.Compute.Api.Contracts.Server
 {
 	/// <summary>
 	///		Provides read-only access to information about a well-known operating system for CaaS virtual machines.

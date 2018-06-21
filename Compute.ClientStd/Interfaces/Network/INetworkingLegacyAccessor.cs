@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Network
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Network
 {
 	/// <summary>
 	/// The NetworkingLegacy interface.

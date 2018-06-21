@@ -1,12 +1,12 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Drs
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Drs
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using ContractsStd.Drs;
-    using ContractsStd.General;
-    using ContractsStd.Network20;
-    using ContractsStd.Requests;
-    using ContractsStd.Requests.Drs;
+    using Contracts.Drs;
+    using Contracts.General;
+    using Contracts.Network20;
+    using Contracts.Requests;
+    using Contracts.Requests.Drs;
 
     /// <summary>
     /// The Consistency Group Interface.

@@ -1,10 +1,10 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Server
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Server
 {
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
 
-	using DD.CBU.Compute.Api.ContractsStd.General;
-	using DD.CBU.Compute.Api.ContractsStd.Image;
+	using DD.CBU.Compute.Api.Contracts.General;
+	using DD.CBU.Compute.Api.Contracts.Image;
 
 	/// <summary>
 	/// The ServerImagesAccessor interface.

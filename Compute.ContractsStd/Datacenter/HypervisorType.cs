@@ -1,6 +1,6 @@
-using DD.CBU.Compute.Api.ContractsStd.General;
+using DD.CBU.Compute.Api.Contracts.General;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Datacenter
+namespace DD.CBU.Compute.Api.Contracts.Datacenter
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Directory
+namespace DD.CBU.Compute.Api.Contracts.Directory
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440")]

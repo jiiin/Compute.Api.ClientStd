@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Reports
+﻿namespace DD.CBU.Compute.Api.Client.Reports
 {
     using System;
     using System.Threading.Tasks;

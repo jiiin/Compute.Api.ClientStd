@@ -1,7 +1,7 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Network20
+﻿namespace DD.CBU.Compute.Api.Client.Network20
 {
-    using DD.CBU.Compute.Api.ClientStd.Interfaces.Network20;
-    using DD.CBU.Compute.Api.ContractsStd.Server10;
+    using DD.CBU.Compute.Api.Client.Interfaces.Network20;
+    using DD.CBU.Compute.Api.Contracts.Server10;
 
     using Interfaces;
 

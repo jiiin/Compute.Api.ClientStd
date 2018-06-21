@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DD.CBU.Compute.Api.ContractsStd
+namespace DD.CBU.Compute.Api.Contracts
 {
 	/// <summary>
 	///		XML namespace constants for the CaaS API.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Drs
+namespace DD.CBU.Compute.Api.Contracts.Drs
 {
 	/// 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34283")]

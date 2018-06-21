@@ -9,7 +9,7 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace DD.CBU.Compute.Api.ClientStd.WebApi
+namespace DD.CBU.Compute.Api.Client.WebApi
 {
     /// <summary>
     /// The CSV Media type formatter

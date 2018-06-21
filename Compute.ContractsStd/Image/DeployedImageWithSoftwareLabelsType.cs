@@ -1,6 +1,6 @@
-using DD.CBU.Compute.Api.ContractsStd.Server;
+using DD.CBU.Compute.Api.Contracts.Server;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Image
+namespace DD.CBU.Compute.Api.Contracts.Image
 {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeployedImageWithDisksType))]

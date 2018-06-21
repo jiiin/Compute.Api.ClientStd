@@ -1,13 +1,13 @@
 ﻿// ReSharper disable once CheckNamespace
 // backwards compatibility to support Existing clients
-namespace DD.CBU.Compute.Api.ClientStd.VIP
+namespace DD.CBU.Compute.Api.Client.VIP
 {
 	using System;
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces;
-	using DD.CBU.Compute.Api.ContractsStd.General;
-	using DD.CBU.Compute.Api.ContractsStd.Vip;
+	using DD.CBU.Compute.Api.Client.Interfaces;
+	using DD.CBU.Compute.Api.Contracts.General;
+	using DD.CBU.Compute.Api.Contracts.Vip;
 
 	/// <summary>
 	/// The compute api vip extensions.

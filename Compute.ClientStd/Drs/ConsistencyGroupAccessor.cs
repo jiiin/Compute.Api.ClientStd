@@ -1,12 +1,12 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Drs
+﻿namespace DD.CBU.Compute.Api.Client.Drs
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using ContractsStd.Drs;
-    using ContractsStd.General;
-    using ContractsStd.Network20;
-    using ContractsStd.Requests;
-    using ContractsStd.Requests.Drs;
+    using Contracts.Drs;
+    using Contracts.General;
+    using Contracts.Network20;
+    using Contracts.Requests;
+    using Contracts.Requests.Drs;
     using Interfaces;
     using Interfaces.Drs;
 
@@ -21,7 +21,7 @@
 		private readonly IWebApi _apiClient;
 
         /// <summary>
-        /// 	Initializes a new instance of the DD.CBU.Compute.Api.ClientStd.Network20.NetworkDomain
+        /// 	Initializes a new instance of the DD.CBU.Compute.Api.Client.Network20.NetworkDomain
         /// 	class.
         /// </summary>
         /// <param name="apiClient">	The client. </param>

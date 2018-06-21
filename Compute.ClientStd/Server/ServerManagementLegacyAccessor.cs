@@ -1,7 +1,7 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Server
+﻿namespace DD.CBU.Compute.Api.Client.Server
 {
-	using DD.CBU.Compute.Api.ClientStd.Interfaces;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.Server;
+	using DD.CBU.Compute.Api.Client.Interfaces;
+	using DD.CBU.Compute.Api.Client.Interfaces.Server;
 
 	/// <summary>
 	/// The server legacy accessor.

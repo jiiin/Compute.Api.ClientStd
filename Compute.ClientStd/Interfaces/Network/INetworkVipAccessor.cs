@@ -1,10 +1,10 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Network
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Network
 {
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
 
-	using DD.CBU.Compute.Api.ContractsStd.General;
-	using DD.CBU.Compute.Api.ContractsStd.Vip;
+	using DD.CBU.Compute.Api.Contracts.General;
+	using DD.CBU.Compute.Api.Contracts.Vip;
 
 	/// <summary>
 	/// The Vip interface.

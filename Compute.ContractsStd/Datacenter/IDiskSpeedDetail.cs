@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Datacenter
+﻿namespace DD.CBU.Compute.Api.Contracts.Datacenter
 {
 	/// <summary>
 	///		Provides read-only access to detailed information about a disk speed specification.

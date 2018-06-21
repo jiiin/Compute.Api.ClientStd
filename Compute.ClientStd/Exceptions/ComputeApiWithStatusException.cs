@@ -1,12 +1,12 @@
-﻿using DD.CBU.Compute.Api.ContractsStd.Network20;
+﻿using DD.CBU.Compute.Api.Contracts.Network20;
 
-namespace DD.CBU.Compute.Api.ClientStd.Exceptions
+namespace DD.CBU.Compute.Api.Client.Exceptions
 {
     using System;
     using System.Runtime.Serialization;
     using System.Text;
 
-    using DD.CBU.Compute.Api.ContractsStd.General;
+    using DD.CBU.Compute.Api.Contracts.General;
 
     using Newtonsoft.Json;
 
@@ -32,7 +32,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Exceptions
         public string CaasRawResponse { get; set; }
 
         /// <summary>
-        /// Initialises a new instance of the <see cref="DD.CBU.Compute.Api.ClientStd.Exceptions.ComputeApiWithStatusException"/> class.
+        /// Initialises a new instance of the <see cref="DD.CBU.Compute.Api.Client.Exceptions.ComputeApiWithStatusException"/> class.
         /// </summary>
         /// <param name="error">Error Type, for older clients</param>
         /// <param name="caasRawResponse">
@@ -48,7 +48,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Exceptions
         }
 
         /// <summary>
-        /// Initialises a new instance of the <see cref="DD.CBU.Compute.Api.ClientStd.Exceptions.ComputeApiWithStatusException"/> class.
+        /// Initialises a new instance of the <see cref="DD.CBU.Compute.Api.Client.Exceptions.ComputeApiWithStatusException"/> class.
         /// </summary>
         /// <param name="error">Error Type, for older clients</param>
         /// <param name="caasOperationStatus">
@@ -64,7 +64,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Exceptions
         }
 
         /// <summary>
-        /// Initialises a new instance of the <see cref="DD.CBU.Compute.Api.ClientStd.Exceptions.BadRequestException"/> class.
+        /// Initialises a new instance of the <see cref="DD.CBU.Compute.Api.Client.Exceptions.BadRequestException"/> class.
         /// </summary>
         /// <param name="error">Error Type</param>
         /// <param name="caasOperationResponse">

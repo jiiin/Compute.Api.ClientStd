@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>DD.CBU.Compute.Api.ClientStd</AssemblyName>
-    <RootNamespace>DD.CBU.Compute.Api.ClientStd</RootNamespace>
+    <AssemblyName>DD.CBU.Compute.Api.Client</AssemblyName>
+    <RootNamespace>DD.CBU.Compute.Api.Client</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Jin Fang</Authors>
     <Company>Dimension Data</Company>
@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Compute.ContractsStd\Compute.ContractsStd.csproj" />
+    <ProjectReference Include="..\Compute.ContractsStd\Compute.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

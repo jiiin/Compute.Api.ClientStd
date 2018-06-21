@@ -1,4 +1,4 @@
-namespace DD.CBU.Compute.Api.ContractsStd.Vip
+namespace DD.CBU.Compute.Api.Contracts.Vip
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440")]

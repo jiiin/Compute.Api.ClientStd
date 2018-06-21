@@ -11,7 +11,7 @@
 
 using System;
 
-namespace DD.CBU.Compute.Api.ClientStd.Utilities
+namespace DD.CBU.Compute.Api.Client.Utilities
 {
 	/// <summary>
 	/// Base class for disposable objects.

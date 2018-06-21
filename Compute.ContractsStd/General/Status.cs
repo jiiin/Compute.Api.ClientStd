@@ -10,7 +10,7 @@
 
 using System.Xml.Serialization;
 
-namespace DD.CBU.Compute.Api.ContractsStd.General
+namespace DD.CBU.Compute.Api.Contracts.General
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCode("xsd", "4.0.30319.18020")]

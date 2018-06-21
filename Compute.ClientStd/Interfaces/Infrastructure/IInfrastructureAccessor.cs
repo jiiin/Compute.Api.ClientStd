@@ -1,13 +1,13 @@
 ﻿using System;
-using DD.CBU.Compute.Api.ContractsStd.General;
+using DD.CBU.Compute.Api.Contracts.General;
 
-namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Infrastructure
+namespace DD.CBU.Compute.Api.Client.Interfaces.Infrastructure
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using DD.CBU.Compute.Api.ContractsStd.Network20;
-    using DD.CBU.Compute.Api.ContractsStd.Requests;
-    using DD.CBU.Compute.Api.ContractsStd.Requests.Infrastructure;
+    using DD.CBU.Compute.Api.Contracts.Network20;
+    using DD.CBU.Compute.Api.Contracts.Requests;
+    using DD.CBU.Compute.Api.Contracts.Requests.Infrastructure;
 
     /// <summary>
 	/// The AccountAccessor interface.

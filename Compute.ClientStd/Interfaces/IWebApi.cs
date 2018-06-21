@@ -1,10 +1,10 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces
 {
 	using System;
 	using System.Threading.Tasks;
 
-	using DD.CBU.Compute.Api.ContractsStd.Directory;
-	using DD.CBU.Compute.Api.ContractsStd.Requests;
+	using DD.CBU.Compute.Api.Contracts.Directory;
+	using DD.CBU.Compute.Api.Contracts.Requests;
 
     /// <summary>
     /// The web API interface for communication with CaaS REST API.

@@ -1,4 +1,4 @@
-﻿using DD.CBU.Compute.Api.ContractsStd.Network20;
+﻿using DD.CBU.Compute.Api.Contracts.Network20;
 
 /// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]

@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ContractsStd.Requests.Network20
+﻿namespace DD.CBU.Compute.Api.Contracts.Requests.Network20
 {
     using System;
 

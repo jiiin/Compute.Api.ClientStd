@@ -1,17 +1,17 @@
-namespace DD.CBU.Compute.Api.ClientStd.Interfaces
+namespace DD.CBU.Compute.Api.Client.Interfaces
 {
 	using System;
 	using System.Collections.Generic;
 	using System.Net;
 	using System.Threading.Tasks;
 
-	using DD.CBU.Compute.Api.ContractsStd.Datacenter;
-	using DD.CBU.Compute.Api.ContractsStd.Directory;
-	using DD.CBU.Compute.Api.ContractsStd.General;
-	using DD.CBU.Compute.Api.ContractsStd.Image;
-	using DD.CBU.Compute.Api.ContractsStd.Server;
-    using DD.CBU.Compute.Api.ContractsStd.Server10;
-    using DD.CBU.Compute.Api.ContractsStd.Software;
+	using DD.CBU.Compute.Api.Contracts.Datacenter;
+	using DD.CBU.Compute.Api.Contracts.Directory;
+	using DD.CBU.Compute.Api.Contracts.General;
+	using DD.CBU.Compute.Api.Contracts.Image;
+	using DD.CBU.Compute.Api.Contracts.Server;
+    using DD.CBU.Compute.Api.Contracts.Server10;
+    using DD.CBU.Compute.Api.Contracts.Software;
 
     /// <summary>
     /// The interface of the CaaS API Client
@@ -101,7 +101,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Interfaces
 		/// The <see cref="Task"/>.
 		/// </returns>
 		[Obsolete]
-		Task<IEnumerable<ContractsStd.Directory.Account>> GetAccounts();
+		Task<IEnumerable<Contracts.Directory.Account>> GetAccounts();
 
         /// <summary>
         /// Adds a sub administrator account

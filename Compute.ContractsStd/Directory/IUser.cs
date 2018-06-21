@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DD.CBU.Compute.Api.ContractsStd.Directory
+namespace DD.CBU.Compute.Api.Contracts.Directory
 {
     /// <summary>
     ///		Provides read-only access to information about a CaaS account.

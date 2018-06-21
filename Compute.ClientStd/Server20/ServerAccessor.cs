@@ -1,14 +1,14 @@
-﻿using DD.CBU.Compute.Api.ContractsStd.Server;
+﻿using DD.CBU.Compute.Api.Contracts.Server;
 
-namespace DD.CBU.Compute.Api.ClientStd.Server20
+namespace DD.CBU.Compute.Api.Client.Server20
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using ContractsStd.General;
-    using ContractsStd.Network20;
-    using ContractsStd.Requests;
-    using ContractsStd.Requests.Server20;
+    using Contracts.General;
+    using Contracts.Network20;
+    using Contracts.Requests;
+    using Contracts.Requests.Server20;
     using Interfaces;
     using Interfaces.Server20;
 
@@ -93,7 +93,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Server20
         /// <summary>	Deletes the server described by serverId. </summary>
         /// <param name="serverId">	The server id. </param>
         /// <returns>	A standard CaaS response. </returns>
-        /// <seealso cref="M:DD.CBU.Compute.Api.ClientStd.Interfaces.Server20.IServerAccessor.DeleteServer(Guid)"/>
+        /// <seealso cref="M:DD.CBU.Compute.Api.Client.Interfaces.Server20.IServerAccessor.DeleteServer(Guid)"/>
         public async Task<ResponseType> DeleteServer(Guid serverId)
         {
             return await _apiClient.PostAsync<DeleteServerType, ResponseType>(ApiUris.DeleteServer(_apiClient.OrganizationId),
@@ -103,7 +103,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Server20
         /// <summary>	Starts a server. </summary>
         /// <param name="serverId">	The server id. </param>
         /// <returns>	A standard CaaS response. </returns>
-        /// <seealso cref="M:DD.CBU.Compute.Api.ClientStd.Interfaces.Server20.IServerAccessor.StartServer(Guid)"/>
+        /// <seealso cref="M:DD.CBU.Compute.Api.Client.Interfaces.Server20.IServerAccessor.StartServer(Guid)"/>
         public async Task<ResponseType> StartServer(Guid serverId)
         {
             return await _apiClient.PostAsync<StartServerType, ResponseType>(ApiUris.StartServer(_apiClient.OrganizationId),
@@ -113,7 +113,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Server20
         /// <summary>	Shutdown server. </summary>
         /// <param name="serverId">	The server id. </param>
         /// <returns>	A standard CaaS response. </returns>
-        /// <seealso cref="M:DD.CBU.Compute.Api.ClientStd.Interfaces.Server20.IServerAccessor.ShutdownServer(Guid)"/>
+        /// <seealso cref="M:DD.CBU.Compute.Api.Client.Interfaces.Server20.IServerAccessor.ShutdownServer(Guid)"/>
         public async Task<ResponseType> ShutdownServer(Guid serverId)
         {
             return await _apiClient.PostAsync<ShutdownServerType, ResponseType>(ApiUris.ShutdownServer(_apiClient.OrganizationId),
@@ -123,7 +123,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Server20
         /// <summary>	Reboot server. </summary>
         /// <param name="serverId">	The server id. </param>
         /// <returns>	A standard CaaS response. </returns>
-        /// <seealso cref="M:DD.CBU.Compute.Api.ClientStd.Interfaces.Server20.IServerAccessor.RebootServer(Guid)"/>
+        /// <seealso cref="M:DD.CBU.Compute.Api.Client.Interfaces.Server20.IServerAccessor.RebootServer(Guid)"/>
         public async Task<ResponseType> RebootServer(Guid serverId)
         {
             return await _apiClient.PostAsync<RebootServerType, ResponseType>(ApiUris.RebootServer(_apiClient.OrganizationId),
@@ -133,7 +133,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Server20
         /// <summary>	Resets the server described by serverId. </summary>
         /// <param name="serverId">	The server id. </param>
         /// <returns>	A standard CaaS response. </returns>
-        /// <seealso cref="M:DD.CBU.Compute.Api.ClientStd.Interfaces.Server20.IServerAccessor.ResetServer(Guid)"/>
+        /// <seealso cref="M:DD.CBU.Compute.Api.Client.Interfaces.Server20.IServerAccessor.ResetServer(Guid)"/>
         public async Task<ResponseType> ResetServer(Guid serverId)
         {
             return await _apiClient.PostAsync<ResetServerType, ResponseType>(ApiUris.ResetServer(_apiClient.OrganizationId),
@@ -143,7 +143,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Server20
         /// <summary>	Power off server. </summary>
         /// <param name="serverId">	The server id. </param>
         /// <returns>	A standard CaaS response. </returns>
-        /// <seealso cref="M:DD.CBU.Compute.Api.ClientStd.Interfaces.Server20.IServerAccessor.PowerOffServer(Guid)"/>
+        /// <seealso cref="M:DD.CBU.Compute.Api.Client.Interfaces.Server20.IServerAccessor.PowerOffServer(Guid)"/>
         public async Task<ResponseType> PowerOffServer(Guid serverId)
         {
             return await _apiClient.PostAsync<PowerOffServerType, ResponseType>(ApiUris.PowerOffServer(_apiClient.OrganizationId),
@@ -153,7 +153,7 @@ namespace DD.CBU.Compute.Api.ClientStd.Server20
         /// <summary>	Updates the v mware tools described by serverId. </summary>
         /// <param name="serverId">	The server id. </param>
         /// <returns>	A standard CaaS response. </returns>
-        /// <seealso cref="M:DD.CBU.Compute.Api.ClientStd.Interfaces.Server20.IServerAccessor.UpdateVmwareTools(Guid)"/>
+        /// <seealso cref="M:DD.CBU.Compute.Api.Client.Interfaces.Server20.IServerAccessor.UpdateVmwareTools(Guid)"/>
         public async Task<ResponseType> UpdateVmwareTools(Guid serverId)
         {
             return await _apiClient.PostAsync<UpdateVmwareToolsServerType, ResponseType>(ApiUris.UpdateVmwareTools(_apiClient.OrganizationId),

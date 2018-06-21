@@ -10,12 +10,12 @@
 // ReSharper disable once CheckNamespace
 // Backwards compatibility, hence not moving the NameSpace
 
-using DD.CBU.Compute.Api.ClientStd.Infrastructure;
-using DD.CBU.Compute.Api.ClientStd.Interfaces.Infrastructure;
-using DD.CBU.Compute.Api.ClientStd.Interfaces.Reports;
-using DD.CBU.Compute.Api.ClientStd.Reports;
+using DD.CBU.Compute.Api.Client.Infrastructure;
+using DD.CBU.Compute.Api.Client.Interfaces.Infrastructure;
+using DD.CBU.Compute.Api.Client.Interfaces.Reports;
+using DD.CBU.Compute.Api.Client.Reports;
 
-namespace DD.CBU.Compute.Api.ClientStd
+namespace DD.CBU.Compute.Api.Client
 {
 	using System;
 	using System.Collections.Generic;
@@ -23,30 +23,30 @@ namespace DD.CBU.Compute.Api.ClientStd
 	using System.Net;
 	using System.Net.Http;
 	using System.Threading.Tasks;
-	using DD.CBU.Compute.Api.ClientStd.Account;
-	using DD.CBU.Compute.Api.ClientStd.Backup;
-	using DD.CBU.Compute.Api.ClientStd.ImportExportImages;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.Account;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.Backup;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.ImportExportImages;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.Network;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.Network20;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.Server;
-	using DD.CBU.Compute.Api.ClientStd.Interfaces.Server20;
-	using DD.CBU.Compute.Api.ClientStd.Network;
-	using DD.CBU.Compute.Api.ClientStd.Network20;
-	using DD.CBU.Compute.Api.ClientStd.Server;
-    using DD.CBU.Compute.Api.ClientStd.Server20;
-	using DD.CBU.Compute.Api.ClientStd.Utilities;
-	using DD.CBU.Compute.Api.ClientStd.WebApi;
-	using DD.CBU.Compute.Api.ContractsStd.Datacenter;
-	using DD.CBU.Compute.Api.ContractsStd.Directory;
-	using DD.CBU.Compute.Api.ContractsStd.General;
-	using DD.CBU.Compute.Api.ContractsStd.Image;
-	using DD.CBU.Compute.Api.ContractsStd.Server;
-    using DD.CBU.Compute.Api.ContractsStd.Server10;
-    using DD.CBU.Compute.Api.ContractsStd.Software;
+	using DD.CBU.Compute.Api.Client.Account;
+	using DD.CBU.Compute.Api.Client.Backup;
+	using DD.CBU.Compute.Api.Client.ImportExportImages;
+	using DD.CBU.Compute.Api.Client.Interfaces;
+	using DD.CBU.Compute.Api.Client.Interfaces.Account;
+	using DD.CBU.Compute.Api.Client.Interfaces.Backup;
+	using DD.CBU.Compute.Api.Client.Interfaces.ImportExportImages;
+	using DD.CBU.Compute.Api.Client.Interfaces.Network;
+	using DD.CBU.Compute.Api.Client.Interfaces.Network20;
+	using DD.CBU.Compute.Api.Client.Interfaces.Server;
+	using DD.CBU.Compute.Api.Client.Interfaces.Server20;
+	using DD.CBU.Compute.Api.Client.Network;
+	using DD.CBU.Compute.Api.Client.Network20;
+	using DD.CBU.Compute.Api.Client.Server;
+    using DD.CBU.Compute.Api.Client.Server20;
+	using DD.CBU.Compute.Api.Client.Utilities;
+	using DD.CBU.Compute.Api.Client.WebApi;
+	using DD.CBU.Compute.Api.Contracts.Datacenter;
+	using DD.CBU.Compute.Api.Contracts.Directory;
+	using DD.CBU.Compute.Api.Contracts.General;
+	using DD.CBU.Compute.Api.Contracts.Image;
+	using DD.CBU.Compute.Api.Contracts.Server;
+    using DD.CBU.Compute.Api.Contracts.Server10;
+    using DD.CBU.Compute.Api.Contracts.Software;
 	using Drs;
 	using Interfaces.Drs;
 	using Interfaces.Tagging;
@@ -640,7 +640,7 @@ namespace DD.CBU.Compute.Api.ClientStd
 		/// A list of accounts associated with the organisation.
 		/// </returns>
 		[Obsolete("Use IComputeApiClient.Account")]
-		public async Task<IEnumerable<ContractsStd.Directory.Account>> GetAccounts()
+		public async Task<IEnumerable<Contracts.Directory.Account>> GetAccounts()
 		{
 			return await Account.GetAccounts();
 		}

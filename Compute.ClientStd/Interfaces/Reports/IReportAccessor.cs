@@ -1,4 +1,4 @@
-﻿namespace DD.CBU.Compute.Api.ClientStd.Interfaces.Reports
+﻿namespace DD.CBU.Compute.Api.Client.Interfaces.Reports
 {
     using System;
     using System.Threading.Tasks;
