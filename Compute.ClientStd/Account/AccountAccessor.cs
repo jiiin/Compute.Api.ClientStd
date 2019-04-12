@@ -378,9 +378,18 @@ namespace DD.CBU.Compute.Api.Client.Account
         /// <summary>The set two factor authentication status.</summary>
         /// <param name="status">The status.</param>
         /// <returns>The <see cref="Task"/>.</returns>
+        [Obsolete("Use SetTwoFactorAuthentication methods")]
         public async Task<Status> SetTwoFactorAuthenticationStatus(TwoFactorAuthentication status)
         {
             return await _apiClient.PostAsync<TwoFactorAuthentication, Status>(ApiUris.TwoFactorAuthenicationStatus(_apiClient.OrganizationId), status);
+        }
+
+        /// <summary>The set two factor authentication status.</summary>
+        /// <param name="status">The status.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        public async Task<ResponseType> SetTwoFactorAuthentication(setTwoFactorAuthentication status)
+        {
+            return await _apiClient.PostAsync<setTwoFactorAuthentication, ResponseType>(ApiUris.SetTwoFactorAuthenication(_apiClient.OrganizationId), status);
         }
 
         /// <summary>
@@ -422,5 +431,15 @@ namespace DD.CBU.Compute.Api.Client.Account
                 pageSize = response.pageSizeSpecified ? response.pageSize : (int?)null
             };
         }
-    }
+
+		/// <summary>
+		/// Get duo status.
+		/// </summary>
+		/// <param name="userName"></param>
+		/// <returns></returns>
+		public async Task<DuoStatusType> GetDuoStatus(string userName)
+		{
+			return await _apiClient.GetAsync<DuoStatusType>(ApiUris.GetDuoStatus(_apiClient.OrganizationId, userName));
+		}
+	}
 }

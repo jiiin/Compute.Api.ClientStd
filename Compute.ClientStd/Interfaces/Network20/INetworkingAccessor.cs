@@ -52,5 +52,10 @@
         /// Gets the VIP Virtual Listener Accessor.
         /// </summary>
         IVipVirtualListenerAccessor VipVirtualListener { get; }
+
+        /// <summary>
+        /// Gets the SSL Accessor.
+        /// </summary>
+        ISslAccessor Ssl { get; }
     }
 }

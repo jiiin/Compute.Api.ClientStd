@@ -7,6 +7,16 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Jin Fang</Authors>
     <Company>Dimension Data</Company>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <PackageProjectUrl>https://github.com/jiiin/Compute.Api.ClientStd</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jiiin/Compute.Api.ClientStd</RepositoryUrl>
+    <Version>1.0.1</Version>
+    <PackageId>DD.CBU.Compute.Api.Contracts_netStd</PackageId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
 
 </Project>

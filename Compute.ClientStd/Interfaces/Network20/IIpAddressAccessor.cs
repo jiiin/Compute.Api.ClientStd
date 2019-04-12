@@ -70,6 +70,12 @@ namespace DD.CBU.Compute.Api.Client.Interfaces.Network20
         /// <returns>	The reserved private addresses. </returns>
         Task<PagedResponse<ReservedPrivateIpv4AddressType>> GetReservedPrivateAddressesForVlanPaginated(Guid vlanId, IPageableRequest pagingOptions = null);
 
+        /// <summary>	Gets reserved private addresses. </summary>
+        /// <param name="networkId">The Network Id.</param>
+        /// <param name="pagingOptions">	The paging options, null means default. </param>
+        /// <returns>	The reserved private addresses. </returns>
+        Task<PagedResponse<ReservedPrivateIpv4AddressType>> GetReservedPrivateAddressesForNetworkPaginated(Guid networkId, IPageableRequest pagingOptions = null);
+
         /// <summary>	Deletes the public IP block. </summary>
         /// <param name="networkDomainId">	Identifier for the network domain. </param>
         /// <param name="publicIpBlockId">	Identifier for the public IP block. </param>

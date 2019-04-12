@@ -128,6 +128,8 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
 
         private string optimizationProfileField;
 
+        private string sslOffloadProfileIdField;
+
         private string[] iruleIdField;
 
         /// <remarks/>
@@ -253,6 +255,13 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
         }
 
         /// <remarks/>
+        public string sslOffloadProfileId
+        {
+            get { return this.sslOffloadProfileIdField; }
+            set { this.sslOffloadProfileIdField = value; }
+        }
+
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("iruleId")]
         public string[] iruleId
         {
@@ -296,6 +305,8 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
         private string[] iruleIdField;
 
         private string idField;
+
+        private string sslOffloadProfileIdField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
@@ -381,6 +392,14 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
         {
             get { return this.optimizationProfileField; }
             set { this.optimizationProfileField = value; }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
+        public string sslOffloadProfileId
+        {
+            get { return this.sslOffloadProfileIdField; }
+            set { this.sslOffloadProfileIdField = value; }
         }
 
         /// <remarks/>
@@ -558,6 +577,8 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
 
         private string datacenterIdField;
 
+        private IdAndNameType sslOffloadProfileField;
+
         /// <remarks/>
         public string networkDomainId
         {
@@ -707,6 +728,13 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
         {
             get { return this.iruleField; }
             set { this.iruleField = value; }
+        }
+
+        /// <remarks/>
+        public IdAndNameType sslOffloadProfile
+        {
+            get { return this.sslOffloadProfileField; }
+            set { this.sslOffloadProfileField = value; }
         }
 
         /// <remarks/>

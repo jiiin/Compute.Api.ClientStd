@@ -71,6 +71,79 @@
             };
         }
 
+		/// <summary>
+		/// The get static routes.
+		/// </summary>
+		/// <param name="filteringOptions">
+		/// The filtering options.
+		/// </param>
+		/// <param name="pagingOptions">
+		/// The paging options.
+		/// </param>
+		/// <returns>
+		/// The <see cref="Task"/>.
+		/// </returns>
+		public async Task<PagedResponse<StaticRouteType>> GetStaticRoutesPaginated(StaticRouteListOptions filteringOptions = null, PageableRequest pagingOptions = null)
+		{
+			var response = await _apiClient.GetAsync<staticRoutes>(ApiUris.StaticRoutes(_apiClient.OrganizationId), pagingOptions, filteringOptions);
+			return new PagedResponse<StaticRouteType>
+			{
+				items = response.staticRoute,
+				totalCount = response.totalCountSpecified ? response.totalCount : (int?)null,
+				pageCount = response.pageCountSpecified ? response.pageCount : (int?)null,
+				pageNumber = response.pageNumberSpecified ? response.pageNumber : (int?)null,
+				pageSize = response.pageSizeSpecified ? response.pageSize : (int?)null
+			};
+		}
+
+		/// <summary>
+		/// This function create a new custom static route.
+		/// </summary>
+		/// <param name="networkDomain">
+		/// The network Domain.
+		/// </param>
+		/// <returns>
+		/// Response containing status.
+		/// </returns>
+		public async Task<ResponseType> CreateStaticRoute(CreateStaticRouteType networkDomain)
+		{
+			return await _apiClient.PostAsync<CreateStaticRouteType, ResponseType>(
+				ApiUris.CreateStaticRoute(_apiClient.OrganizationId),
+				networkDomain);
+		}
+
+        /// <summary>
+		/// This function deletes an existing static route.
+		/// </summary>
+		/// <param name="staticRouteId">
+		/// The static route ID.
+		/// </param>
+		/// <returns>
+		/// Response containing status.
+		/// </returns>
+		public async Task<ResponseType> DeleteStaticRoute(Guid staticRouteId)
+        {
+            return await _apiClient.PostAsync<DeleteStaticRouteType, ResponseType>(
+                ApiUris.DeleteStaticRoute(_apiClient.OrganizationId),
+                new DeleteStaticRouteType { id = staticRouteId.ToString() });
+        }
+
+        /// <summary>
+        /// This function Restores Static Routes to System Static Route Values (erases all current routes).
+        /// </summary>
+        /// <param name="networkDomainId">
+        /// The network domain ID.
+        /// </param>
+        /// <returns>
+        /// Response containing status.
+        /// </returns>
+        public async Task<ResponseType> RestoreStaticRoute(Guid networkDomainId)
+        {
+            return await _apiClient.PostAsync<RestoreStaticRouteType, ResponseType>(
+                ApiUris.RestoreStaticRoute(_apiClient.OrganizationId),
+                new RestoreStaticRouteType { networkDomainId = networkDomainId.ToString() });
+        }
+
         /// <summary>
         /// 	This function gets a network domain from Cloud.
         /// </summary>
@@ -150,5 +223,78 @@
 			    ApiUris.DeleteNetworkDomain(_apiClient.OrganizationId),
                 new DeleteNetworkDomainType { id = id.ToString() });
 		}
-	}
+
+		/// <summary>
+		/// The get snat exclusions.
+		/// </summary>
+		/// <param name="filteringOptions">
+		/// The filtering options.
+		/// </param>
+		/// <param name="pagingOptions">
+		/// The paging options.
+		/// </param>
+		/// <returns>
+		/// The <see cref="Task"/>.
+		/// </returns>
+		public async Task<PagedResponse<SnatExclusionType>> GetSnatExclusionsPaginated(SnatExclusionListOptions filteringOptions = null, PageableRequest pagingOptions = null)
+		{
+			var response = await _apiClient.GetAsync<snatExclusions>(ApiUris.SnatExclusions(_apiClient.OrganizationId), pagingOptions, filteringOptions);
+			return new PagedResponse<SnatExclusionType>
+			{
+				items = response.snatExclusion,
+				totalCount = response.totalCountSpecified ? response.totalCount : (int?)null,
+				pageCount = response.pageCountSpecified ? response.pageCount : (int?)null,
+				pageNumber = response.pageNumberSpecified ? response.pageNumber : (int?)null,
+				pageSize = response.pageSizeSpecified ? response.pageSize : (int?)null
+			};
+		}
+		/// <summary>
+		/// Restores Snat exclusions.
+		/// </summary>
+		/// <param name="networkDomainId">
+		/// The network domain ID.
+		/// </param>
+		/// <returns>
+		/// Response containing status.
+		/// </returns>
+		public async Task<ResponseType> RestoreSnatExclusions(Guid networkDomainId)
+		{
+			return await _apiClient.PostAsync<RestoreSnatExclusionsType, ResponseType>(
+				ApiUris.RestoreSnatExclusions(_apiClient.OrganizationId),
+				new RestoreSnatExclusionsType { networkDomainId = networkDomainId.ToString() });
+		}
+
+        /// <summary>
+		/// This function create a new custom Snat Exclusion.
+		/// </summary>
+		/// <param name="SNATExclusion">
+		/// The network Domain.
+		/// </param>
+		/// <returns>
+		/// Response containing status.
+		/// </returns>
+		public async Task<ResponseType> AddSNATExclusion(AddSnatExclusionType SNATExclusion)
+        {
+            return await _apiClient.PostAsync<AddSnatExclusionType, ResponseType>(
+                ApiUris.AddSnatExclusion(_apiClient.OrganizationId),
+                SNATExclusion);
+        }
+
+        /// <summary>
+		/// This function deletes a SNAT Exclusion.
+		/// </summary>
+		/// <param name="SNATExclusionId">
+		/// The static route ID.
+		/// </param>
+		/// <returns>
+		/// Response containing status.
+		/// </returns>
+		public async Task<ResponseType> RemoveSNATExclusion(Guid SNATExclusionId)
+        {
+            return await _apiClient.PostAsync<RemoveSnatExclusionType, ResponseType>(
+                ApiUris.RemoveSnatExclusion(_apiClient.OrganizationId),
+                new RemoveSnatExclusionType { id = SNATExclusionId.ToString() });
+        }
+
+    }
 }

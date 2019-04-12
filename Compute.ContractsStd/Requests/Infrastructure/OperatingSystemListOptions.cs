@@ -21,9 +21,9 @@
         public const string FamilyField = "family";
 
 		/// <summary>
-		/// The "DatacenterId" field name.
+		/// The "OsUnitsGroupId" field name.
 		/// </summary>
-		public const string DatacenterIdField = "datacenterId";
+		public const string OsUnitsGroupIdField = "osUnitsGroupId";
 
 		/// <summary>
 		/// The "SupportsGuestOsCustomization" field name.
@@ -58,12 +58,12 @@
         }
 
 		/// <summary>
-		/// Gets or sets the Datacenter Id filter.
+		/// Gets or sets the Os Units Group Id filter.
 		/// </summary>
-		public string DatacenterId
+		public string OsUnitsGroupId
 		{
-			get { return GetFilter<string>(DatacenterIdField); }
-			set { SetFilter(DatacenterIdField, value); }
+			get { return GetFilter<string>(OsUnitsGroupIdField); }
+			set { SetFilter(OsUnitsGroupIdField, value); }
 		}
 
 		/// <summary>

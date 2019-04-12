@@ -131,10 +131,10 @@ namespace DD.CBU.Compute.Api.Contracts.Drs
         public ConsistencyGroupTypeJournal journal;
 
         /// <remarks/>
-        public DrsNetworkDomainType source;
+        public NetworkInfrastructureType source;
 
         /// <remarks/>
-        public DrsNetworkDomainType target;
+        public NetworkInfrastructureType target;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("serverPair")]
@@ -289,7 +289,7 @@ namespace DD.CBU.Compute.Api.Contracts.Drs
             set { this.idField = value; }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
@@ -314,4 +314,33 @@ namespace DD.CBU.Compute.Api.Contracts.Drs
             }
         }
     }
+
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+    [System.Xml.Serialization.XmlRootAttribute("cleanConsistencyGroup", Namespace = "urn:didata.com:api:cloud:types", IsNullable = false)]
+    public partial class CleanConsistencyGroupType
+    {
+
+        private string idField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string id
+        {
+            get
+            {
+                return this.idField;
+            }
+            set
+            {
+                this.idField = value;
+            }
+        }
+    }
+
 }

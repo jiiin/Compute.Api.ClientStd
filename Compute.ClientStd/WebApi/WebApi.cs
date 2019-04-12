@@ -102,7 +102,7 @@ namespace DD.CBU.Compute.Api.Client.WebApi
 		/// </returns>
 		public async Task<IAccount> LoginAsync()
 		{
-			Account account = await GetAsync<Account>(ApiUris.GetMyUser());
+			Account account = await GetAsync<Account>(ApiUris.GetMyUser09());
 			_organizationId = account.OrganizationId;
 			return account;
 		}

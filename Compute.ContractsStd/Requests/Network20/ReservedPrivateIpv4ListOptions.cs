@@ -20,6 +20,16 @@
         /// </summary>
         public const string IpAddressField = "ipAddress";
 
+        /// <summary>
+        /// The "exclusive" field name.
+        /// </summary>
+        public const string ExclusiveField = "exclusive";
+
+        /// <summary>
+        /// The "datacenterId" field name.
+        /// </summary>
+        public const string DatacenterIdField = "datacenterId";
+
         /// <summary>	
         /// Identifies MCP 1.0 network id.
         /// </summary>
@@ -45,6 +55,24 @@
         {
             get { return GetFilter<string>(IpAddressField); }
             set { SetFilter(IpAddressField, value); }
+        }
+
+        /// <summary>	
+        /// Identifies Exclusive.
+        /// </summary>
+        public string Exclusive
+        {
+            get { return GetFilter<string>(ExclusiveField); }
+            set { SetFilter(ExclusiveField, value); }
+        }
+
+        /// <summary>	
+        /// Identifies DatacenterId.
+        /// </summary>
+        public string DatacenterId
+        {
+            get { return GetFilter<string>(DatacenterIdField); }
+            set { SetFilter(DatacenterIdField, value); }
         }
     }
 }

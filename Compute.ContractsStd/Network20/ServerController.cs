@@ -85,8 +85,12 @@
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public int sizeGb;
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public int iops;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
         public string speed;
 
         /// <remarks/>
@@ -161,51 +165,6 @@
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool keySpecified;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string state;
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public class ServerFloppyType
-    {
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int driveNumber;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int key;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool keySpecified;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int sizeGb;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool sizeGbSpecified;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string speed;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string fileName;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]

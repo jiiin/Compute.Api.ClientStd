@@ -12,6 +12,7 @@
     <PackageProjectUrl>https://github.com/jiiin/Compute.Api.ClientStd</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jiiin/Compute.Api.ClientStd</RepositoryUrl>
     <Version>1.0.1</Version>
+    <PackageId>DD.CBU.Compute.Api.Client_netStd</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +22,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Compute.ContractsStd\Compute.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>

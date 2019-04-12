@@ -13,207 +13,66 @@
 // 
 namespace DD.CBU.Compute.Api.Contracts.Network20
 {
-    using System.Xml.Serialization;
-
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public partial class MonitoringType
+    public partial class DatacenterClusterType
     {
 
-        private PropertyType[] propertyField;
+        /// <remarks/>
+        public string displayName;
 
-        private string maintenanceStatusField;
+        /// <remarks/>
+        public string description;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("diskSpeed")]
+        public DiskSpeedType[] diskSpeed;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("cpuSpeed")]
+        public CpuSpeedType[] cpuSpeed;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("property")]
-        public PropertyType[] property
-        {
-            get { return this.propertyField; }
-            set { this.propertyField = value; }
-        }
+        public PropertyType[] property;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string maintenanceStatus
-        {
-            get { return this.maintenanceStatusField; }
-            set { this.maintenanceStatusField = value; }
-        }
+        public string id;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public bool @default;
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public partial class PropertyType
+    public partial class VariableIopLimitsType
     {
 
-        private string nameField;
-
-        private string valueField;
+        /// <remarks/>
+        public int minDiskIops;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string name
-        {
-            get { return this.nameField; }
-            set { this.nameField = value; }
-        }
+        public int maxDiskIops;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string value
-        {
-            get { return this.valueField; }
-            set { this.valueField = value; }
-        }
+        public int minIopsPerGb;
+
+        /// <remarks/>
+        public int maxIopsPerGb;
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public partial class ConsoleAccessType
-    {
-
-        private PropertyType[] propertyField;
-
-        private string maintenanceStatusField;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("property")]
-        public PropertyType[] property
-        {
-            get { return this.propertyField; }
-            set { this.propertyField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string maintenanceStatus
-        {
-            get { return this.maintenanceStatusField; }
-            set { this.maintenanceStatusField = value; }
-        }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public partial class BackupType
-    {
-
-        private PropertyType[] propertyField;
-
-        private string typeField;
-
-        private string maintenanceStatusField;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("property")]
-        public PropertyType[] property
-        {
-            get { return this.propertyField; }
-            set { this.propertyField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string type
-        {
-            get { return this.typeField; }
-            set { this.typeField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string maintenanceStatus
-        {
-            get { return this.maintenanceStatusField; }
-            set { this.maintenanceStatusField = value; }
-        }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public partial class CpuSpeedType
-    {
-
-        private string displayNameField;
-
-        private string descriptionField;
-
-        private string unavailableReasonField;
-
-        private string idField;
-
-        private bool defaultField;
-
-        private bool availableField;
-
-        /// <remarks/>
-        public string displayName
-        {
-            get { return this.displayNameField; }
-            set { this.displayNameField = value; }
-        }
-
-        /// <remarks/>
-        public string description
-        {
-            get { return this.descriptionField; }
-            set { this.descriptionField = value; }
-        }
-
-        /// <remarks/>
-        public string unavailableReason
-        {
-            get { return this.unavailableReasonField; }
-            set { this.unavailableReasonField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get { return this.idField; }
-            set { this.idField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool @default
-        {
-            get { return this.defaultField; }
-            set { this.defaultField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool available
-        {
-            get { return this.availableField; }
-            set { this.availableField = value; }
-        }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -221,71 +80,107 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
     public partial class DiskSpeedType
     {
 
-        private string displayNameField;
-
-        private string abbreviationField;
-
-        private string descriptionField;
-
-        private string unavailableReasonField;
-
-        private string idField;
-
-        private bool defaultField;
-
-        private bool availableField;
+        /// <remarks/>
+        public string displayName;
 
         /// <remarks/>
-        public string displayName
-        {
-            get { return this.displayNameField; }
-            set { this.displayNameField = value; }
-        }
+        public string abbreviation;
 
         /// <remarks/>
-        public string abbreviation
-        {
-            get { return this.abbreviationField; }
-            set { this.abbreviationField = value; }
-        }
+        public string description;
 
         /// <remarks/>
-        public string description
-        {
-            get { return this.descriptionField; }
-            set { this.descriptionField = value; }
-        }
+        public string unavailableReason;
 
         /// <remarks/>
-        public string unavailableReason
-        {
-            get { return this.unavailableReasonField; }
-            set { this.unavailableReasonField = value; }
-        }
+        public VariableIopLimitsType variableIopLimits;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get { return this.idField; }
-            set { this.idField = value; }
-        }
+        public string id;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool @default
-        {
-            get { return this.defaultField; }
-            set { this.defaultField = value; }
-        }
+        public bool @default;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool available
-        {
-            get { return this.availableField; }
-            set { this.availableField = value; }
-        }
+        public bool available;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public bool variableIops;
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+    public partial class CpuSpeedType
+    {
+
+        /// <remarks/>
+        public string displayName;
+
+        /// <remarks/>
+        public string description;
+
+        /// <remarks/>
+        public string unavailableReason;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string id;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public bool @default;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public bool available;
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+    public partial class PropertyType
+    {
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string name;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string value;
+    }
+
+	/// <remarks/>
+	[System.Xml.Serialization.XmlIncludeAttribute(typeof(DatacenterFeatureWithTargetsType))]
+	[System.Xml.Serialization.XmlIncludeAttribute(typeof(BackupType))]
+	[System.Xml.Serialization.XmlIncludeAttribute(typeof(HypervisorType))]
+	[System.Xml.Serialization.XmlIncludeAttribute(typeof(NetworkingType))]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+	public partial class DatacenterFeatureType
+    {
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("property")]
+        public PropertyType[] property;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string maintenanceStatus;
     }
 
 	/// <remarks/>
@@ -294,298 +189,103 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-	public partial class DatacenterClusterType
-    {
+	public partial class DatacenterFeatureWithTargetsType : DatacenterFeatureType
+	{
 
-		private string displayNameField;
-
-		private string descriptionField;
-
-		private DiskSpeedType[] diskSpeedField;
-
-		private CpuSpeedType[] cpuSpeedField;
-
-		private PropertyType[] propertyField;
-
-		private string idField;
-
-		private bool defaultField;
+		private string targetDatacenterIdsField;
 
 		/// <remarks/>
-		public string displayName
+		public string targetDatacenterIds
 		{
 			get
 			{
-				return this.displayNameField;
+				return this.targetDatacenterIdsField;
 			}
 			set
 			{
-				this.displayNameField = value;
-			}
-		}
-
-		/// <remarks/>
-		public string description
-		{
-			get
-			{
-				return this.descriptionField;
-			}
-			set
-			{
-				this.descriptionField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("diskSpeed")]
-		public DiskSpeedType[] diskSpeed
-		{
-			get
-			{
-				return this.diskSpeedField;
-			}
-			set
-			{
-				this.diskSpeedField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("cpuSpeed")]
-		public CpuSpeedType[] cpuSpeed
-		{
-			get
-			{
-				return this.cpuSpeedField;
-			}
-			set
-			{
-				this.cpuSpeedField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("property")]
-		public PropertyType[] property
-		{
-			get
-			{
-				return this.propertyField;
-			}
-			set
-			{
-				this.propertyField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string id
-		{
-			get
-			{
-				return this.idField;
-			}
-			set
-			{
-				this.idField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public bool @default
-		{
-			get
-			{
-				return this.defaultField;
-			}
-			set
-			{
-				this.defaultField = value;
+				this.targetDatacenterIdsField = value;
 			}
 		}
 	}
 
+	/// <remarks/>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+	public partial class VpnType
+	{
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public string url;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public string vpnAccess;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public bool regionalVpn;
+	}
 
 	/// <remarks/>
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public partial class HypervisorType
+    public partial class BackupType : DatacenterFeatureType
     {
 
-        private DiskSpeedType[] diskSpeedField;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string type;
+    }
 
-        private CpuSpeedType[] cpuSpeedField;
-
-		private DatacenterClusterType[] clusterField;
-
-		private PropertyType[] propertyField;
-
-        private string typeField;
-
-        private string maintenanceStatusField;
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+    public partial class HypervisorType : DatacenterFeatureType
+    {
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("diskSpeed")]
-        public DiskSpeedType[] diskSpeed
-        {
-            get { return this.diskSpeedField; }
-            set { this.diskSpeedField = value; }
-        }
+        public DiskSpeedType[] diskSpeed;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("cpuSpeed")]
-        public CpuSpeedType[] cpuSpeed
-        {
-            get { return this.cpuSpeedField; }
-            set { this.cpuSpeedField = value; }
-        }
+        public CpuSpeedType[] cpuSpeed;
 
-		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("cluster")]
-		public DatacenterClusterType[] cluster
-		{
-			get
-			{
-				return this.clusterField;
-			}
-			set
-			{
-				this.clusterField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("property")]
-        public PropertyType[] property
-        {
-            get { return this.propertyField; }
-            set { this.propertyField = value; }
-        }
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("cluster")]
+        public DatacenterClusterType[] cluster;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string type
-        {
-            get { return this.typeField; }
-            set { this.typeField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string maintenanceStatus
-        {
-            get { return this.maintenanceStatusField; }
-            set { this.maintenanceStatusField = value; }
-        }
+        public string type;
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public partial class NetworkingType
+    public partial class NetworkingType : DatacenterFeatureType
     {
-
-        private PropertyType[] propertyField;
-
-        private string typeField;
-
-        private string maintenanceStatusField;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("property")]
-        public PropertyType[] property
-        {
-            get { return this.propertyField; }
-            set { this.propertyField = value; }
-        }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string type
-        {
-            get { return this.typeField; }
-            set { this.typeField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string maintenanceStatus
-        {
-            get { return this.maintenanceStatusField; }
-            set { this.maintenanceStatusField = value; }
-        }
+        public string type;
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public partial class DrsType
-    {
-
-        private PropertyType[] propertyField;
-
-        private IdListType targetDatacentersField;
-
-        private string maintenanceStatusField;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("property")]
-        public PropertyType[] property
-        {
-            get { return this.propertyField; }
-            set { this.propertyField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("targetDatacenters")]
-        public IdListType targetDatacenters
-        {
-            get { return this.targetDatacentersField; }
-            set { this.targetDatacentersField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string maintenanceStatus
-        {
-            get { return this.maintenanceStatusField; }
-            set { this.maintenanceStatusField = value; }
-        }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public partial class IdListType
-    {
-        private string listField;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlText()]
-        public string list
-        {
-            get { return this.listField; }
-            set { this.listField = value; }
-        }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -593,137 +293,57 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
     public partial class DatacenterType
     {
 
-        private string displayNameField;
-
-        private string cityField;
-
-        private string stateField;
-
-        private string countryField;
-
-        private string vpnUrlField;
-
-        private string ftpsHostField;
-
-        private NetworkingType networkingField;
-
-        private HypervisorType hypervisorField;
-
-        private BackupType backupField;
-
-        private ConsoleAccessType consoleAccessField;
-
-        private MonitoringType monitoringField;
-
-        private DrsType drsField;
-
-        private string idField;
-
-        private string typeField;
+        /// <remarks/>
+        public string displayName;
 
         /// <remarks/>
-        public string displayName
-        {
-            get { return this.displayNameField; }
-            set { this.displayNameField = value; }
-        }
+        public string city;
 
         /// <remarks/>
-        public string city
-        {
-            get { return this.cityField; }
-            set { this.cityField = value; }
-        }
+        public string state;
 
         /// <remarks/>
-        public string state
-        {
-            get { return this.stateField; }
-            set { this.stateField = value; }
-        }
+        public string country;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlElementAttribute("vpn")]
+		public VpnType[] vpn;
+
+		/// <remarks/>
+		public string ftpsHost;
 
         /// <remarks/>
-        public string country
-        {
-            get { return this.countryField; }
-            set { this.countryField = value; }
-        }
+        public NetworkingType networking;
 
         /// <remarks/>
-        public string vpnUrl
-        {
-            get { return this.vpnUrlField; }
-            set { this.vpnUrlField = value; }
-        }
+        public HypervisorType hypervisor;
 
         /// <remarks/>
-        public string ftpsHost
-        {
-            get { return this.ftpsHostField; }
-            set { this.ftpsHostField = value; }
-        }
+        public BackupType backup;
 
         /// <remarks/>
-        public NetworkingType networking
-        {
-            get { return this.networkingField; }
-            set { this.networkingField = value; }
-        }
+        public DatacenterFeatureType consoleAccess;
 
         /// <remarks/>
-        public HypervisorType hypervisor
-        {
-            get { return this.hypervisorField; }
-            set { this.hypervisorField = value; }
-        }
+        public DatacenterFeatureType monitoring;
 
         /// <remarks/>
-        public BackupType backup
-        {
-            get { return this.backupField; }
-            set { this.backupField = value; }
-        }
+        public DatacenterFeatureWithTargetsType snapshot;
 
         /// <remarks/>
-        public ConsoleAccessType consoleAccess
-        {
-            get { return this.consoleAccessField; }
-            set { this.consoleAccessField = value; }
-        }
-
-        /// <remarks/>
-        public MonitoringType monitoring
-        {
-            get { return this.monitoringField; }
-            set { this.monitoringField = value; }
-        }
-
-        /// <remarks/>
-        public DrsType drs
-        {
-            get { return this.drsField; }
-            set { this.drsField = value; }
-        }
+        public DatacenterFeatureWithTargetsType drs;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get { return this.idField; }
-            set { this.idField = value; }
-        }
+        public string id;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string type
-        {
-            get { return this.typeField; }
-            set { this.typeField = value; }
-        }
+        public string type;
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -732,94 +352,40 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
     public partial class datacenters
     {
 
-        private DatacenterType[] datacenterField;
-
-        private int pageNumberField;
-
-        private bool pageNumberFieldSpecified;
-
-        private int pageCountField;
-
-        private bool pageCountFieldSpecified;
-
-        private int totalCountField;
-
-        private bool totalCountFieldSpecified;
-
-        private int pageSizeField;
-
-        private bool pageSizeFieldSpecified;
-
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("datacenter")]
-        public DatacenterType[] datacenter
-        {
-            get { return this.datacenterField; }
-            set { this.datacenterField = value; }
-        }
+        public DatacenterType[] datacenter;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int pageNumber
-        {
-            get { return this.pageNumberField; }
-            set { this.pageNumberField = value; }
-        }
+        public int pageNumber;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool pageNumberSpecified
-        {
-            get { return this.pageNumberFieldSpecified; }
-            set { this.pageNumberFieldSpecified = value; }
-        }
+        public bool pageNumberSpecified;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int pageCount
-        {
-            get { return this.pageCountField; }
-            set { this.pageCountField = value; }
-        }
+        public int pageCount;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool pageCountSpecified
-        {
-            get { return this.pageCountFieldSpecified; }
-            set { this.pageCountFieldSpecified = value; }
-        }
+        public bool pageCountSpecified;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int totalCount
-        {
-            get { return this.totalCountField; }
-            set { this.totalCountField = value; }
-        }
+        public int totalCount;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool totalCountSpecified
-        {
-            get { return this.totalCountFieldSpecified; }
-            set { this.totalCountFieldSpecified = value; }
-        }
+        public bool totalCountSpecified;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int pageSize
-        {
-            get { return this.pageSizeField; }
-            set { this.pageSizeField = value; }
-        }
+        public int pageSize;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool pageSizeSpecified
-        {
-            get { return this.pageSizeFieldSpecified; }
-            set { this.pageSizeFieldSpecified = value; }
-        }
+        public bool pageSizeSpecified;
     }
 }

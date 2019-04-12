@@ -121,6 +121,16 @@
         }
 
         /// <summary>
+        /// The Clean Consistency Group method.
+        /// </summary>
+        /// <param name="cleanConsistencyGroupType">The delete consistency group.</param>
+        /// <returns><see cref="ResponseType"/></returns>
+        public async Task<ResponseType> CleanConsistencyGroup(CleanConsistencyGroupType cleanConsistencyGroupType)
+        {
+            return await _apiClient.PostAsync<CleanConsistencyGroupType, ResponseType>(ApiUris.CleanConsistencyGroup(_apiClient.OrganizationId), cleanConsistencyGroupType);
+        }
+
+        /// <summary>
         /// The initiate failover for a consistency group.
         /// </summary>
         /// <param name="InitiateFailover">The Initiate failover type.</param>

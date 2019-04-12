@@ -54,6 +54,12 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
     {
 
         /// <remarks/>
+        public string ipAddress;
+
+        /// <remarks/>
+        public string description;
+
+        /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public string datacenterId;
 
@@ -62,34 +68,8 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
         public string vlanId;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value;
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    public partial class ReservedPrivateIpv4AddressType
-    {
-
-        /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string datacenterId;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string networkId;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string vlanId;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value;
+        public bool exclusive;
     }
 
     /// <remarks/>
@@ -99,12 +79,12 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:didata.com:api:cloud:types")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:didata.com:api:cloud:types", IsNullable = false)]
-    public partial class reservedPrivateIpv4Addresses
+    public partial class reservedIpv6Addresses
     {
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ipv4")]
-        public ReservedPrivateIpv4AddressType[] ipv4;
+        [System.Xml.Serialization.XmlElementAttribute("reservedIpv6Address")]
+        public ReservedIpv6AddressType[] reservedIpv6Address;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
@@ -144,14 +124,62 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:didata.com:api:cloud:types")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:didata.com:api:cloud:types", IsNullable = false)]
-    public partial class reservedIpv6Addresses
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+    public partial class ReservedPrivateIpv4AddressType
     {
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("reservedIpv6Address")]
-        public ReservedIpv6AddressType[] reservedIpv6Address;
+        public string ipAddress;
+
+        /// <remarks/>
+        public string description;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("networkId", typeof(string))]
+        [System.Xml.Serialization.XmlElementAttribute("vlanId", typeof(string))]
+        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
+        public string Item;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public NetworkVlanChoiceType ItemElementName;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string datacenterId;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public bool exclusive;
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types", IncludeInSchema = false)]
+    public enum NetworkVlanChoiceType
+    {
+
+        /// <remarks/>
+        networkId,
+
+        /// <remarks/>
+        vlanId,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:didata.com:api:cloud:types")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:didata.com:api:cloud:types", IsNullable = false)]
+    public partial class reservedPrivateIpv4Addresses
+    {
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ipv4")]
+        public ReservedPrivateIpv4AddressType[] ipv4;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
@@ -255,6 +283,9 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
 
         /// <remarks/>
         public string ipAddress;
+
+        /// <remarks/>
+        public string description;
     }
 
     /// <remarks/>
@@ -286,6 +317,9 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
 
         /// <remarks/>
         public string ipAddress;
+
+        /// <remarks/>
+        public string description;
     }
 
     /// <remarks/>

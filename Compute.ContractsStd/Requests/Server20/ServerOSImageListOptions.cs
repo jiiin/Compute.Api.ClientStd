@@ -48,6 +48,11 @@
         public const string OperatingSystemFamilyField = "operatingSystemFamily";
 
         /// <summary>
+        /// The "osUnitsGroupId" field name.
+        /// </summary>
+        public const string OsUnitsGroupIdField = "osUnitsGroupId";
+
+        /// <summary>
         /// The "GuestOsCustomization" field name.
         /// </summary>
         public const string GuestOsCustomizationField = "guestOsCustomization";
@@ -145,6 +150,15 @@
         {
             get { return GetFilter<string>(OperatingSystemFamilyField); }
             set { SetFilter(OperatingSystemFamilyField, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the OsUnitsGroupId filter.
+        /// </summary>
+        public string OsUnitsGroupId
+        {
+            get { return GetFilter<string>(OsUnitsGroupIdField); }
+            set { SetFilter(OsUnitsGroupIdField, value); }
         }
 
         /// <summary>

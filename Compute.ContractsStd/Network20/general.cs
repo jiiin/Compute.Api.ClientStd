@@ -442,7 +442,7 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -450,35 +450,21 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
     public partial class OperatingSystemType
     {
 
-        private string idField;
-
-        private string displayNameField;
-
-        private string familyField;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string id;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get { return this.idField; }
-            set { this.idField = value; }
-        }
+        public string displayName;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string displayName
-        {
-            get { return this.displayNameField; }
-            set { this.displayNameField = value; }
-        }
+        public string family;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string family
-        {
-            get { return this.familyField; }
-            set { this.familyField = value; }
-        }
+        public string osUnitsGroupId;
     }
 
     /// <remarks/>
@@ -558,6 +544,10 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string osUnitsGroupId;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
         public bool supportsGuestOsCustomization;
 
         /// <remarks/>
@@ -609,7 +599,80 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
         public bool isDefault;
     }
 
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+    public partial class NetworkInfrastructureType
+    {
 
+        private IdAndNameType itemField;
+
+        private NetworkInfrastructureItemChoiceType itemElementNameField;
+
+        private string datacenterIdField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("network", typeof(IdAndNameType))]
+        [System.Xml.Serialization.XmlElementAttribute("networkDomain", typeof(IdAndNameType))]
+        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
+        public IdAndNameType Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public NetworkInfrastructureItemChoiceType ItemElementName
+        {
+            get
+            {
+                return this.itemElementNameField;
+            }
+            set
+            {
+                this.itemElementNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string datacenterId
+        {
+            get
+            {
+                return this.datacenterIdField;
+            }
+            set
+            {
+                this.datacenterIdField = value;
+            }
+        }
+    }
+
+   
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types", IncludeInSchema = false)]
+    public enum NetworkInfrastructureItemChoiceType
+    {
+
+        /// <remarks/>
+        network,
+
+        /// <remarks/>
+        networkDomain,
+    }
 
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]

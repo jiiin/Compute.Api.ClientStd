@@ -104,6 +104,45 @@
 
     }
 
+    public partial class ServerBaseType
+    {
+        /// Note, server will have either nic or NetworkInfo
+        /// <summary>	Gets or sets the NIC. </summary>
+        /// <value>	The NIC. </value>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public ServerBaseTypeNic nic
+        {
+            get { return Item as ServerBaseTypeNic; }
+            set { Item = value; }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public ServerBaseTypeNetworkInfo networkInfo
+        {
+            get { return Item as ServerBaseTypeNetworkInfo; }
+            set { Item = value; }
+        }
+
+        /// Note, server will have either consistencyGroup or drsEligible
+        /// <summary>	Gets or sets the NIC. </summary>
+        /// <value>	The NIC. </value>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public ServerBaseTypeConsistencyGroup consistencyGroup
+        {
+            get { return Item1 as ServerBaseTypeConsistencyGroup; }
+            set { Item1 = value; }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public ServerBaseTypeDrsEligible drsEligible
+        {
+            get { return Item1 as ServerBaseTypeDrsEligible; }
+            set { Item1 = value; }
+        }
+    }
+
     public partial class DeployServerType
     {
         /// <remarks/>

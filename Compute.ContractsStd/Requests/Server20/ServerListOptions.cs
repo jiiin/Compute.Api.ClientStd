@@ -66,6 +66,16 @@
         /// The "operatingSystemId" field name.
         /// </summary>
         public const string OperatingSystemIdField = "operatingSystemId";
+        
+        /// <summary>
+        /// The "operatingSystemFamily" field name.
+        /// </summary>
+        public const string OperatingSystemFamilyField = "operatingSystemFamily";
+        
+        /// <summary>
+        /// The "osUnitsGroupId" field name.
+        /// </summary>
+        public const string OsUnitsGroupIdField = "osUnitsGroupId";
 
         /// <summary>
         /// The "ipv6" field name.
@@ -81,6 +91,41 @@
         /// The "privateIpv4" field name.
         /// </summary>
         public const string DrsEligibleField = "drsEligible";
+
+        /// <summary>
+        /// The "deploymentMode" field name.
+        /// </summary>
+        public const string DeploymentModeField = "deploymentMode";
+
+        /// <summary>
+		/// The "deploymentMode" field name.
+		/// </summary>
+		public const string TagField = "tag.";
+
+        /// <summary>
+		/// The "deploymentMode" field name.
+		/// </summary>
+		public const string TagIdField = "tagId.";
+
+		/// <summary>
+		/// The "replicationEnabled" field name.
+		/// </summary>
+		public const string ReplicationEnabledField = "replicationEnabled";
+
+		/// <summary>
+		/// The "replicationTargetDatacenterId" field name.
+		/// </summary>
+		public const string ReplicationTargetDatacenterIdField = "replicationTargetDatacenterId";
+
+		/// <summary>
+		/// The "deploymentMode" field name.
+		/// </summary>
+		public Guid? TagKeyId { get; set; }
+
+        /// <summary>
+		/// The "deploymentMode" field name.
+		/// </summary>
+        public string TagKeyName { get; set; }
 
         /// <summary>	
         /// Identifies an individual Virtual Listener.
@@ -198,6 +243,24 @@
             get { return GetFilter<Guid?>(OperatingSystemIdField); }
             set { SetFilter(OperatingSystemIdField, value); }
         }
+        
+        /// <summary>
+        /// Gets or sets the OperatingSystemFamily filter.
+        /// </summary>
+        public string OperatingSystemFamily
+        {
+            get { return GetFilter<string>(OperatingSystemFamilyField); }
+            set { SetFilter(OperatingSystemFamilyField, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the OsUnitsGroupId filter.
+        /// </summary>
+        public string OsUnitsGroupId
+        {
+            get { return GetFilter<string>(OsUnitsGroupIdField); }
+            set { SetFilter(OsUnitsGroupIdField, value); }
+        }
 
         /// <summary>
         /// Gets or sets the Ipv6 filter.
@@ -224,6 +287,51 @@
         {
             get { return GetFilter<bool>(DrsEligibleField); }
             set { SetFilter(DrsEligibleField, value); }
+        }
+
+		/// <summary>
+		/// Gets or sets the replicationEnabled filter.
+		/// </summary>
+		public bool? ReplicationEnabled
+		{
+			get { return GetFilter<bool>(ReplicationEnabledField); }
+			set { SetFilter(ReplicationEnabledField, value); }
+		}
+
+
+		/// <summary>
+		/// Gets or sets the deploymentMode filter.
+		/// </summary>
+		public string DeploymentMode
+        {
+            get { return GetFilter<string>(DeploymentModeField); }
+            set { SetFilter(DeploymentModeField, value); }
+        }
+
+		/// <summary>
+		/// Gets or sets the replicationTargetDatacenterId filter.
+		/// </summary>
+		public string ReplicationTargetDatacenterId
+		{
+			get { return GetFilter<string>(ReplicationTargetDatacenterIdField); }
+			set { SetFilter(ReplicationTargetDatacenterIdField, value); }
+		}
+
+		/// <summary>	
+		/// Identifies Virtual Listeners by their name.
+		/// </summary>
+		public string TagValue
+        {
+            get
+            {
+                var tag = string.IsNullOrEmpty(TagKeyName) ? TagIdField + TagKeyId : TagField + TagKeyName;
+                return GetFilter<string>(tag);
+            }
+            set
+            {
+                var tag = string.IsNullOrEmpty(TagKeyName) ? TagIdField + TagKeyId : TagField + TagKeyName;
+                SetFilter(tag, value);
+            }
         }
     }
 }

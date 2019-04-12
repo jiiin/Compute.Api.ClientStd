@@ -26,6 +26,7 @@
             VipPool = new VipPoolAccessor(apiClient);
             VipNode = new VipNodeAccessor(apiClient);
             VipVirtualListener = new VipVirtualListenerAccessor(apiClient);
+            Ssl = new SslAccessor(apiClient);
         }
 
         /// <summary>
@@ -77,5 +78,10 @@
         /// Gets the VIP Virtual Listener Accessor.
         /// </summary>
         public IVipVirtualListenerAccessor VipVirtualListener { get; private set; }
+
+        /// <summary>
+        /// Gets the SSL Accessor.
+        /// </summary>
+        public ISslAccessor Ssl { get; private set; }
     }
 }

@@ -14,6 +14,7 @@ namespace DD.CBU.Compute.Api.Client.Interfaces
     using Server;
     using Server20;
     using Tagging;
+    using Organization;
 
     /// <summary>
     /// The interface of the CaaS API Client
@@ -90,5 +91,15 @@ namespace DD.CBU.Compute.Api.Client.Interfaces
         /// Gets the Consistency groups.
         /// </summary>
         IConsistencyGroupAccessor ConsistencyGroups { get; }
+
+        /// <summary>
+        /// Gets the Snapshot Accessor.
+        /// </summary>
+        ISnapshotAccessor Snapshot { get; }
+
+        /// <summary>
+        /// Gets the Organization Accessor.
+        /// </summary>
+        IOrganizationAccessor Organization { get; }
     }
 }

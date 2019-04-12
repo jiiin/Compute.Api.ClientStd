@@ -1,4 +1,5 @@
 ﻿using DD.CBU.Compute.Api.Contracts.Server;
+using DD.CBU.Compute.Api.Contracts.Snapshot;
 
 namespace DD.CBU.Compute.Api.Client.Server20
 {
@@ -54,6 +55,15 @@ namespace DD.CBU.Compute.Api.Client.Server20
 
         /// <summary>The get mcp 2 deployed servers.</summary>
         /// <param name="filteringOptions">The filtering options.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        public async Task<IEnumerable<ServerSummaryType>> ListServers(ServerListOptions filteringOptions = null)
+        {
+            var response = await ListServersPaginated(filteringOptions, null);
+            return response.items;
+        }
+
+        /// <summary>The get mcp 2 deployed servers.</summary>
+        /// <param name="filteringOptions">The filtering options.</param>
         /// <param name="pagingOptions">The paging options.</param>
         /// <returns>The <see cref="Task"/>.</returns>
         public async Task<PagedResponse<ServerType>> GetServersPaginated(ServerListOptions filteringOptions = null, IPageableRequest pagingOptions = null)
@@ -66,6 +76,27 @@ namespace DD.CBU.Compute.Api.Client.Server20
             return new PagedResponse<ServerType>
             {
                 items = response.Server,
+                totalCount = response.totalCountSpecified ? response.totalCount : (int?)null,
+                pageCount = response.pageCountSpecified ? response.pageCount : (int?)null,
+                pageNumber = response.pageNumberSpecified ? response.pageNumber : (int?)null,
+                pageSize = response.pageSizeSpecified ? response.pageSize : (int?)null
+            };
+        }
+
+        /// <summary>The get mcp 2 deployed servers.</summary>
+        /// <param name="filteringOptions">The filtering options.</param>
+        /// <param name="pagingOptions">The paging options.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        public async Task<PagedResponse<ServerSummaryType>> ListServersPaginated(ServerListOptions filteringOptions = null, IPageableRequest pagingOptions = null)
+        {
+            var response = await _apiClient.GetAsync<ServersSummaryResposeType>(
+                ApiUris.ListServers(_apiClient.OrganizationId),
+                pagingOptions,
+                filteringOptions);
+
+            return new PagedResponse<ServerSummaryType>
+            {
+                items = response.server,
                 totalCount = response.totalCountSpecified ? response.totalCount : (int?)null,
                 pageCount = response.pageCountSpecified ? response.pageCount : (int?)null,
                 pageNumber = response.pageNumberSpecified ? response.pageNumber : (int?)null,
@@ -88,6 +119,14 @@ namespace DD.CBU.Compute.Api.Client.Server20
         public async Task<ServerType> GetServer(Guid serverId)
         {
             return await _apiClient.GetAsync<ServerType>(ApiUris.GetMcp2Server(_apiClient.OrganizationId, serverId));
+        }
+
+        /// <summary>The get mcp 2 deployed server.</summary>
+        /// <param name="serverId">The server id.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        public async Task<ServerDetailType> GetServerDetails(Guid serverId)
+        {
+            return await _apiClient.GetAsync<ServerDetailType>(ApiUris.GetServerDetails(_apiClient.OrganizationId, serverId));
         }
 
         /// <summary>	Deletes the server described by serverId. </summary>
@@ -189,20 +228,22 @@ namespace DD.CBU.Compute.Api.Client.Server20
                 new CleanServerType { id = serverId.ToString() });
         }
 
-        /// <summary>Adds an additional NIC to a server.</summary>
-        /// <param name="serverId">The server id.</param>
-        /// <param name="vlanId">The VLAN id</param>
-        /// <param name="privateIpv4">The Private IP v4 address</param>
-        /// <param name="networkAdapter">The optional network adapter type (E1000 or VMXNET3)</param>
-        /// <returns>The <see cref="Task"/>.</returns>
-        public async Task<ResponseType> AddNic(Guid serverId, Guid? vlanId, string privateIpv4, string networkAdapter = null)
+		/// <summary>Adds an additional NIC to a server.</summary>
+		/// <param name="serverId">The server id.</param>
+		/// <param name="vlanId">The VLAN id</param>
+		/// <param name="privateIpv4">The Private IP v4 address</param>
+		/// <param name="networkAdapter">The optional network adapter type (E1000 or VMXNET3)</param>
+		/// <param name="connected">The NIC connection state</param>
+		/// <returns>The <see cref="Task"/>.</returns>
+		[Obsolete("use AddNic(AddNicType addNicType) instead.")]
+		public async Task<ResponseType> AddNic(Guid serverId, Guid? vlanId, string privateIpv4, string networkAdapter = null, bool? connected = null)
         {
             if (vlanId == null && string.IsNullOrEmpty(privateIpv4))
             {
                 throw new ArgumentNullException("vlanId");
             }
 
-            var nic = new VlanIdOrPrivateIpType
+            var nic = new NewNicType
             {
                 networkAdapter = networkAdapter
             };
@@ -218,6 +259,11 @@ namespace DD.CBU.Compute.Api.Client.Server20
                 nic.vlanId = vlanId.ToString();
             }
 
+            //if (connected != null)
+            //{
+            //    nic.connected = connected.Value;
+            //}
+
             AddNicType addNicType = new AddNicType
             {
                 serverId = serverId.ToString(),
@@ -227,11 +273,19 @@ namespace DD.CBU.Compute.Api.Client.Server20
             return await _apiClient.PostAsync<AddNicType, ResponseType>(ApiUris.AddNic(_apiClient.OrganizationId), addNicType);
         }
 
-        /// <summary>Exchange Nic Vlans.</summary>
-        /// <param name="nicId1">nicId1</param>
-        /// <param name="nicId2">nicId2</param>
-        /// <returns>The <see cref="Task"/>.</returns>
-        public async Task<ResponseType> ExchangeNicVlans(string nicId1, string nicId2)
+		/// <summary>Adds an additional NIC to a server.</summary>
+		/// <param name="addNicType">The server id.</param>
+		/// <returns>The <see cref="Task"/>.</returns>
+		public async Task<ResponseType> AddNic(AddNicType addNicType)
+	    {
+			return await _apiClient.PostAsync<AddNicType, ResponseType>(ApiUris.AddNic(_apiClient.OrganizationId), addNicType);
+		}
+
+	    /// <summary>Exchange Nic Vlans.</summary>
+		/// <param name="nicId1">nicId1</param>
+		/// <param name="nicId2">nicId2</param>
+		/// <returns>The <see cref="Task"/>.</returns>
+		public async Task<ResponseType> ExchangeNicVlans(string nicId1, string nicId2)
         {
             if (string.IsNullOrWhiteSpace(nicId1))
             {
@@ -345,6 +399,14 @@ namespace DD.CBU.Compute.Api.Client.Server20
             return await _apiClient.PostAsync<MoveServerType, ResponseType>(ApiUris.MoveServerToCluster(_apiClient.OrganizationId), moveServer);
         }
 
+        /// <summary>The move server to cluster.</summary>
+        /// <param name="copyServer">The copy server.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        public async Task<ResponseType> CopyServer(CopyServerType copyServer)
+        {
+            return await _apiClient.PostAsync<CopyServerType, ResponseType>(ApiUris.CopyServer(_apiClient.OrganizationId), copyServer);
+        }
+
         /// <summary>Deploys an un customized server to MCP 2.0 data centers </summary>
         /// <param name="serverDetails">Details of the server to be deployed</param>
         /// <returns>Response containing the server id</returns>
@@ -430,5 +492,148 @@ namespace DD.CBU.Compute.Api.Client.Server20
         {
             return await _apiClient.PostAsync<IdType, ResponseType>(ApiUris.RemoveFlpFile(_apiClient.OrganizationId), id);
         }
-    }
+
+		/// <summary>
+		/// Set Nic Connectivity
+		/// </summary>
+		/// <param name="setNicConnectivityType">Nic Connectivity Type.</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> SetNicConnectivity(SetNicConnectivityType setNicConnectivityType)
+		{
+			return await _apiClient.PostAsync<SetNicConnectivityType, ResponseType>(ApiUris.SetNicConnectivity(_apiClient.OrganizationId), setNicConnectivityType);
+		}
+
+
+        /// <summary>Set or unset scripts to be run before and/or after a Server Snapshot is taken.</summary>
+        /// <param name="editSnapshotServiceScriptsType">Edit Snapshot Service Scripts Type.</param>
+        /// <returns>The <see cref="ResponseType"/></returns>
+        public async Task<ResponseType> EditSnapshotServiceScripts(EditSnapshotServiceScriptsType editSnapshotServiceScriptsType)
+        {
+            return await _apiClient.PostAsync<EditSnapshotServiceScriptsType, ResponseType>(ApiUris.EditSnapshotServiceScripts(_apiClient.OrganizationId), editSnapshotServiceScriptsType);
+        }
+
+        /// <summary>
+        /// Enable snapshot service
+        /// </summary>
+        /// <param name="enableSnapshotServiceType">Enable Snapshot Service Type.</param>
+        /// <returns>The <see cref="ResponseType"/></returns>
+        public async Task<ResponseType> EnableSnapshotService(EnableSnapshotServiceType enableSnapshotServiceType)
+		{
+			return await _apiClient.PostAsync<EnableSnapshotServiceType, ResponseType>(ApiUris.EnableSnapshotService(_apiClient.OrganizationId), enableSnapshotServiceType);
+		}
+
+		/// <summary>
+		/// Change snapshot service plan
+		/// </summary>
+		/// <param name="changeSnapshotServicePlanType">Change Snapshot Service Plan Type.</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> ChangeSnapshotServicePlan(ChangeSnapshotServicePlanType changeSnapshotServicePlanType)
+		{
+			return await _apiClient.PostAsync<ChangeSnapshotServicePlanType, ResponseType>(ApiUris.ChangeSnapshotServicePlan(_apiClient.OrganizationId), changeSnapshotServicePlanType);
+		}
+
+		/// <summary>
+		/// Edit Snapshot Metadata
+		/// </summary>
+		/// <param name="editSnapshotMetadataType">Edit Snapshot Metadata Type.</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> EditSnapshotMetadata(EditSnapshotMetadataType editSnapshotMetadataType)
+		{
+			return await _apiClient.PostAsync<EditSnapshotMetadataType, ResponseType>(ApiUris.EditSnapshotMetadata(_apiClient.OrganizationId), editSnapshotMetadataType);
+		}
+
+		/// <summary>
+		/// Disable snapshot service
+		/// </summary>
+		/// <param name="disableSnapshotServiceTypeType">Server Id to disable the snapshot service.</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> DisableSnapshotService(DisableSnapshotServiceType disableSnapshotServiceTypeType)
+		{
+			return await _apiClient.PostAsync<DisableSnapshotServiceType, ResponseType>(ApiUris.DisableSnapshotService(_apiClient.OrganizationId), disableSnapshotServiceTypeType);
+		}
+
+        /// <summary>
+		/// Disable snapshot replication
+		/// </summary>
+		/// <param name="disableReplicationType">Server Id to disable the snapshot replication.</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> DisableServerSnapshotReplication(DisableReplicationType disableReplicationType)
+        {
+            return await _apiClient.PostAsync<DisableReplicationType, ResponseType>(ApiUris.DisableServerSnapshotReplication(_apiClient.OrganizationId), disableReplicationType);
+        }
+
+        /// <summary>
+        /// Restore From Snapshot.
+        /// </summary>
+        /// <param name="restoreFromSnapshotType">Restore a file or folder from snapshot.</param>
+        /// <returns>The <see cref="ResponseType"/></returns>
+        public async Task<ResponseType> RestoreFromSnapshot(RestoreFromSnapshotType restoreFromSnapshotType)
+		{
+			return await _apiClient.PostAsync<RestoreFromSnapshotType, ResponseType>(ApiUris.RestoreFromSnapshot(_apiClient.OrganizationId), restoreFromSnapshotType);
+		}
+
+		/// <summary>
+		/// Initiate manual snapshot
+		/// </summary>
+		/// <param name="initiateManualSnapshotType">Server Id and description to initiate manual snapshot.</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> InitiateManualSnapshot(InitiateManualSnapshotType initiateManualSnapshotType)
+	    {
+			return await _apiClient.PostAsync<InitiateManualSnapshotType, ResponseType>(ApiUris.InitiateManualSnapshot(_apiClient.OrganizationId), initiateManualSnapshotType);
+		}
+
+		/// <summary>
+		/// Delete manual snapshot
+		/// </summary>
+		/// <param name="id">Snapshot Id to delete manual snapshot.</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> DeleteManualSnapshot(DeleteManualSnapshotType id)
+		{
+			return await _apiClient.PostAsync<DeleteManualSnapshotType, ResponseType>(ApiUris.DeleteManualSnapshot(_apiClient.OrganizationId), id);
+		}
+
+        /// <summary>The change disk iops.</summary>
+        /// <param name="diskIops">The change disk iops.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        public async Task<ResponseType> ChangeDiskIops(ChangeDiskIopsType diskIops)
+        {
+            return await _apiClient.PostAsync<ChangeDiskIopsType, ResponseType>(ApiUris.ChangeDiskIops(_apiClient.OrganizationId), diskIops);
+        }
+        
+        /// <summary>The change disk size.</summary>
+        /// <param name="changeDisk">The change disk size.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        public async Task<ResponseType> ExpandDiskSize(ExpandDiskType changeDisk)
+        {
+            return await _apiClient.PostAsync<ExpandDiskType, ResponseType>(ApiUris.ExpandDiskSize(_apiClient.OrganizationId), changeDisk);
+        }
+        
+        /// <summary>The change disk speed and iops.</summary>
+        /// <param name="changeDiskSpeed">The change disk speed.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        public async Task<ResponseType> ChangeDiskSpeed(ChangeDiskSpeedType changeDiskSpeed)
+        {
+            return await _apiClient.PostAsync<ChangeDiskSpeedType, ResponseType>(ApiUris.ChangeDikSpeed(_apiClient.OrganizationId), changeDiskSpeed);
+        }
+
+		/// <summary>
+		/// Enable snapshot replication.
+		/// </summary>
+		/// <param name="enableReplication">Server Id and datacenter id to initiate manual snapshot.</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> EnableSnapshotReplication(EnableReplicationType enableReplication)
+		{
+			return await _apiClient.PostAsync<EnableReplicationType, ResponseType>(ApiUris.EnableSnapshotReplication(_apiClient.OrganizationId), enableReplication);
+		}
+
+		/// <summary>
+		/// Create Drs Target Server.
+		/// </summary>
+		/// <param name="createDrsTargetServer">Drs Target Server details</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> CreateDrsTargetServer(CreateDrsTargetServerType createDrsTargetServer)
+		{
+			return await _apiClient.PostAsync<CreateDrsTargetServerType, ResponseType>(ApiUris.CreateDrsTargetServer(_apiClient.OrganizationId), createDrsTargetServer);
+		}
+	}
 }

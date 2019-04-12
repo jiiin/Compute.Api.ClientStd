@@ -82,6 +82,11 @@ namespace DD.CBU.Compute.Api.Contracts.Requests.Network20
         /// </summary>
         public const string FallbackPersistenceProfileIdField = "fallbackPersistenceProfileId";
 
+        /// <summary>
+        /// The "sslOffloadProfileId" field name.
+        /// </summary>
+        public const string SslOffloadProfileIdField = "sslOffloadProfileId";
+
         /// <summary>	
         /// Identifies an individual Virtual Listener.
         /// </summary>
@@ -215,6 +220,15 @@ namespace DD.CBU.Compute.Api.Contracts.Requests.Network20
         {
             get { return GetFilter<string>(FallbackPersistenceProfileIdField); }
             set { SetFilter(FallbackPersistenceProfileIdField, value); }
+        }
+
+        /// <summary>	
+        /// Identifies Virtual Listeners by their SSL Offload Profile Id.
+        /// </summary>
+        public string SslOffloadProfileId
+        {
+            get { return GetFilter<string>(SslOffloadProfileIdField); }
+            set { SetFilter(SslOffloadProfileIdField, value); }
         }
     }
 }

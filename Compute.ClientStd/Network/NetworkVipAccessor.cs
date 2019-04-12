@@ -369,7 +369,7 @@
 			return serverfarm ?? null;
 		}
 
-		/// <summary>
+        /// <summary>
 		/// The create server farm.
 		/// </summary>
 		/// <param name="networkId">
@@ -424,6 +424,51 @@
 		}
 
 		/// <summary>
+		/// The create server farm.
+		/// </summary>
+		/// <param name="networkId">
+		/// The network id.
+		/// </param>
+		/// <param name="name">
+		/// The name.
+		/// </param>
+		/// <param name="predictor">
+		/// The predictor.
+		/// </param>
+		/// <param name="realServers">
+		/// The real servers.
+		/// </param>
+		/// <param name="probeId">
+		/// The probe id.
+		/// </param>
+		/// <returns>
+		/// The <see cref="Task"/>.
+		/// </returns>
+		public async Task<Status> CreateServerFarm(
+            string networkId,
+            string name,
+            ServerFarmPredictorType predictor,
+            NewServerFarmRealServer[] realServers,
+            string probeId = null)
+        {
+            var newserverfarm = new NewServerFarm
+            {
+                name = name,
+                predictor = predictor,
+                realServer = realServers
+            };
+            if (!string.IsNullOrEmpty(probeId))
+                newserverfarm.probeId = probeId;
+
+            Status status =
+                await
+                    this._apiClient.PostAsync<NewServerFarm, Status>(
+                        ApiUris.CreateOrGetVipServerFarm(this._apiClient.OrganizationId, networkId), newserverfarm);
+
+            return status;
+        }
+
+        /// <summary>
 		/// The remove server farm.
 		/// </summary>
 		/// <param name="networkId">

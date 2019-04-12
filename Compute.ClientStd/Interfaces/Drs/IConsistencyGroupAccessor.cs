@@ -71,6 +71,13 @@
         Task<ResponseType> DeleteConsistencyGroup(DeleteConsistencyGroupType deleteConsistencyGroupType);
 
         /// <summary>
+        /// The Clean Consistency Group method.
+        /// </summary>
+        /// <param name="cleanConsistencyGroupType">The delete consistency group.</param>
+        /// <returns><see cref="ResponseType"/></returns>
+        Task<ResponseType> CleanConsistencyGroup(CleanConsistencyGroupType cleanConsistencyGroupType);
+
+        /// <summary>
         /// The initiate failover for a consistency group.
         /// </summary>
         /// <param name="InitiateFailover">The Initiate failover type.</param>

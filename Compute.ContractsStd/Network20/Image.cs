@@ -16,8 +16,8 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
     using System.Xml.Serialization;
 
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof (CustomerImageType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof (OsImageType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerImageType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OsImageType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -33,7 +33,7 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
         private CpuType cpuField;
 
         private uint memoryGbField;
-        
+
         private string[] softwareLabelField;
 
         private System.DateTime createTimeField;
@@ -919,5 +919,13 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public string speed;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public int iops;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool iopsSpecified;
     }
 }

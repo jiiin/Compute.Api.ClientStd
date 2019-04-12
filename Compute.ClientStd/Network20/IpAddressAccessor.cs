@@ -189,6 +189,26 @@
             };
         }
 
+        /// <summary>	Gets reserved private addresses. </summary>
+        /// <param name="networkId">The Network Id.</param>
+        /// <param name="pagingOptions">	The paging options, null means default. </param>
+        /// <returns>	The reserved private addresses. </returns>
+        public async Task<PagedResponse<ReservedPrivateIpv4AddressType>> GetReservedPrivateAddressesForNetworkPaginated(Guid networkId, IPageableRequest pagingOptions = null)
+        {
+            var response = await _apiClient.GetAsync<reservedPrivateIpv4Addresses>(
+                ApiUris.GetReservedPrivateAddressesForNetwork(_apiClient.OrganizationId, networkId.ToString()), 
+                pagingOptions);
+
+            return new PagedResponse<ReservedPrivateIpv4AddressType>
+            {
+                items = response.ipv4, 
+                totalCount = response.totalCountSpecified ? response.totalCount : (int?) null, 
+                pageCount = response.pageCountSpecified ? response.pageCount : (int?) null, 
+                pageNumber = response.pageNumberSpecified ? response.pageNumber : (int?) null, 
+                pageSize = response.pageSizeSpecified ? response.pageSize : (int?) null
+            };
+        }
+
         /// <summary>	Deletes the public IP block. </summary>
         /// <param name="networkDomainId">	Identifier for the network domain. </param>
         /// <param name="publicIpBlockId">	Identifier for the public IP block. </param>

@@ -49,6 +49,7 @@ namespace DD.CBU.Compute.Api.Client
     using DD.CBU.Compute.Api.Contracts.Software;
 	using Drs;
 	using Interfaces.Drs;
+	using Interfaces.Organization;
 	using Interfaces.Tagging;
 	using Tagging;
 
@@ -209,6 +210,10 @@ namespace DD.CBU.Compute.Api.Client
             Reports = new ReportAccessor(WebApi);
             Tagging = new TaggingAccessor(WebApi);
             ConsistencyGroups = new ConsistencyGroupAccessor(WebApi);
+            ConsistencyGroups = new ConsistencyGroupAccessor(WebApi);
+		    Ssl = new SslAccessor(WebApi);
+		    Snapshot = new SnapshotAccessor(WebApi);
+            Organization = new OrganizationAccessor(WebApi);
 		}
 
 		#endregion
@@ -372,17 +377,34 @@ namespace DD.CBU.Compute.Api.Client
         /// </summary>
         public IConsistencyGroupAccessor ConsistencyGroups { get; private set; }
 
+        /// <summary>
+        /// Gets the SSL.
+        /// </summary>
+        public ISslAccessor Ssl { get; private set; }
+
+
+        /// <summary>
+        /// Gets the Snapshot Accessor.
+        /// </summary>
+        public ISnapshotAccessor Snapshot { get; private set; }
+
+        /// <summary>
+        /// Gets the Organization Accessor.
+        /// </summary>
+        public IOrganizationAccessor Organization { get; private set; }
+
         #endregion Instance data
 
-		#region Public Methods
+        #region Public Methods
 
-		/// <summary>
-		/// The login async.
-		/// </summary>
-		/// <returns>
-		/// The <see cref="Task"/>.
-		/// </returns>
-		public async Task<IAccount> Login()
+        /// <summary>
+        /// The login async.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="Task"/>.
+        /// </returns>
+        [Obsolete("This method is obsolete; use 'LoginAsync' instead")]
+        public async Task<IAccount> Login()
 		{
 			return await WebApi.LoginAsync();
 		}

@@ -13,38 +13,38 @@
     /// <summary>	Access methods for VLAN Operations </summary>
     /// <seealso cref="T:DD.CBU.Compute.Api.Client.Interfaces.IVlan"/>
     public class VlanAccessor : IVlanAccessor
-	{
-		/// <summary>
-		/// The Api.
-		/// </summary>
-		private readonly IWebApi _api;
+    {
+        /// <summary>
+        /// The Api.
+        /// </summary>
+        private readonly IWebApi _api;
 
-		/// <summary>
-		/// Initialises a new instance of the <see cref="VlanAccessor"/> class.
-		/// </summary>
-		/// <param name="api">
-		/// The api.
-		/// </param>
-		public VlanAccessor(IWebApi api)
-		{
-			_api = api;
-		}
+        /// <summary>
+        /// Initialises a new instance of the <see cref="VlanAccessor"/> class.
+        /// </summary>
+        /// <param name="api">
+        /// The api.
+        /// </param>
+        public VlanAccessor(IWebApi api)
+        {
+            _api = api;
+        }
 
-		/// <summary>
-		/// 	Retrieves the list of ACL rules associated with a network. This API requires your
-		/// 	organization ID and the ID of the target network.
-		/// </summary>		
-		/// <param name="options">
-		/// 	Options for controlling the operation. 
-		/// </param>
-		/// <returns>
-		/// 	The VLAN collection. 
-		/// </returns>
-		public async Task<IEnumerable<VlanType>> GetVlans(VlanListOptions options = null)
-		{
-			var response = await GetVlansPaginated(options, null);
-			return response.items;
-		}
+        /// <summary>
+        /// 	Retrieves the list of ACL rules associated with a network. This API requires your
+        /// 	organization ID and the ID of the target network.
+        /// </summary>		
+        /// <param name="options">
+        /// 	Options for controlling the operation. 
+        /// </param>
+        /// <returns>
+        /// 	The VLAN collection. 
+        /// </returns>
+        public async Task<IEnumerable<VlanType>> GetVlans(VlanListOptions options = null)
+        {
+            var response = await GetVlansPaginated(options, null);
+            return response.items;
+        }
 
         /// <summary>
         /// 	Retrieves the list of ACL rules associated with a network. This API requires your
@@ -92,47 +92,47 @@
         /// </returns>
         [Obsolete("Inconsistent: Use GetVlans(VlanOptions options) or GetVlans(GetVlansPaginated options, PageableRequest pagingOptions) instead.")]
         public async Task<IEnumerable<VlanType>> GetVlans(Guid id, string vlanName, Guid networkDomainId, PageableRequest pagingOptions = null)
-		{
-			var vlans =
-				await
-				_api.GetAsync<vlans>(
-					ApiUris.GetVlan(_api.OrganizationId, id, vlanName, networkDomainId), pagingOptions);
+        {
+            var vlans =
+                await
+                _api.GetAsync<vlans>(
+                    ApiUris.GetVlan(_api.OrganizationId, id, vlanName, networkDomainId), pagingOptions);
 
-			return vlans.vlan;
-		}
+            return vlans.vlan;
+        }
 
-		/// <summary>
-		/// 	An IComputeApiClient extension method that gets a VLAN. 
-		/// </summary>
-		/// <param name="vlanId">
-		/// 	The id. 
-		/// </param>
-		/// <returns>
-		/// 	The vlan. 
-		/// </returns>
-		public async Task<VlanType> GetVlan(Guid vlanId)
-		{
-			return await _api.GetAsync<VlanType>(
-				ApiUris.GetVlan(_api.OrganizationId, vlanId));
-		}
+        /// <summary>
+        /// 	An IComputeApiClient extension method that gets a VLAN. 
+        /// </summary>
+        /// <param name="vlanId">
+        /// 	The id. 
+        /// </param>
+        /// <returns>
+        /// 	The vlan. 
+        /// </returns>
+        public async Task<VlanType> GetVlan(Guid vlanId)
+        {
+            return await _api.GetAsync<VlanType>(
+                ApiUris.GetVlan(_api.OrganizationId, vlanId));
+        }
 
-		/// <summary>
-		/// Deploys Virtual LAN on a network domain
-		/// </summary>
-		/// <param name="vlan">
-		/// Virtual LAN
-		/// </param>
-		/// <returns>
-		/// Operation status
-		/// </returns>
-		public async Task<ResponseType> DeployVlan(DeployVlanType vlan)
-		{
-			return
-				await
-				_api.PostAsync<DeployVlanType, ResponseType>(
-					ApiUris.DeployVlan(_api.OrganizationId),
-					vlan);
-		}
+        /// <summary>
+        /// Deploys Virtual LAN on a network domain
+        /// </summary>
+        /// <param name="vlan">
+        /// Virtual LAN
+        /// </param>
+        /// <returns>
+        /// Operation status
+        /// </returns>
+        public async Task<ResponseType> DeployVlan(DeployVlanType vlan)
+        {
+            return
+                await
+                _api.PostAsync<DeployVlanType, ResponseType>(
+                    ApiUris.DeployVlan(_api.OrganizationId),
+                    vlan);
+        }
 
         /// <summary>
         /// Edit Virtual LAN on a network domain.
@@ -146,6 +146,26 @@
         public async Task<ResponseType> EditVlan(EditVlanType editVlan)
         {
             return await _api.PostAsync<EditVlanType, ResponseType>(ApiUris.EditVlan(_api.OrganizationId), editVlan);
+        }
+
+        /// <summary>
+        /// API operation to attach (or re-attach) a Detached VLAN.   gatewayAddressing may be LOW or HIGH. Will default to LOW if not specified in request. 
+        /// </summary>
+        /// <param name="attachVlan"></param>
+        /// <returns></returns>
+        public async Task<ResponseType> AttachVlan(AttachVlanType attachVlan)
+        {
+            return await _api.PostAsync<AttachVlanType, ResponseType>(ApiUris.AttachVlan(_api.OrganizationId), attachVlan);
+        }
+
+        /// <summary>
+        /// API operation to detach an attached VLAN.   users can switch between Detached and Attached VLANs.
+        /// </summary>
+        /// <param name="detachVlan"></param>
+        /// <returns></returns>
+        public async Task<ResponseType> DetachVlan(DetachVlanType detachVlan)
+        {
+            return await _api.PostAsync<DetachVlanType, ResponseType>(ApiUris.DetachVlan(_api.OrganizationId), detachVlan);
         }
 
         /// <summary>
@@ -172,12 +192,12 @@
         /// Operation status
         /// </returns>
         public async Task<ResponseType> DeleteVlan(Guid id)
-		{
-			return 
-				await
-					_api.PostAsync<DeleteVlanType, ResponseType>(
-						ApiUris.DeleteVlan(_api.OrganizationId),
-						new DeleteVlanType { id = id.ToString() });
-		}
-	}
+        {
+            return
+                await
+                    _api.PostAsync<DeleteVlanType, ResponseType>(
+                        ApiUris.DeleteVlan(_api.OrganizationId),
+                        new DeleteVlanType { id = id.ToString() });
+        }
+    }
 }

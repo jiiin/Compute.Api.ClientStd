@@ -165,4 +165,95 @@
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public string number;
     }
+
+	/// <remarks/>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+	[System.Xml.Serialization.XmlRootAttribute("duoStatus", Namespace = "urn:didata.com:api:cloud:types", IsNullable = false)]
+	public partial class DuoStatusType
+	{
+
+		private string enrolmentStatusField;
+
+		private System.DateTime lastLoginTimeField;
+
+		private bool lastLoginTimeFieldSpecified;
+
+		private System.DateTime enrolmentExpiryTimeField;
+
+		private bool enrolmentExpiryTimeFieldSpecified;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public string enrolmentStatus
+		{
+			get
+			{
+				return this.enrolmentStatusField;
+			}
+			set
+			{
+				this.enrolmentStatusField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public System.DateTime lastLoginTime
+		{
+			get
+			{
+				return this.lastLoginTimeField;
+			}
+			set
+			{
+				this.lastLoginTimeField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool lastLoginTimeSpecified
+		{
+			get
+			{
+				return this.lastLoginTimeFieldSpecified;
+			}
+			set
+			{
+				this.lastLoginTimeFieldSpecified = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public System.DateTime enrolmentExpiryTime
+		{
+			get
+			{
+				return this.enrolmentExpiryTimeField;
+			}
+			set
+			{
+				this.enrolmentExpiryTimeField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool enrolmentExpiryTimeSpecified
+		{
+			get
+			{
+				return this.enrolmentExpiryTimeFieldSpecified;
+			}
+			set
+			{
+				this.enrolmentExpiryTimeFieldSpecified = value;
+			}
+		}
+	}
 }

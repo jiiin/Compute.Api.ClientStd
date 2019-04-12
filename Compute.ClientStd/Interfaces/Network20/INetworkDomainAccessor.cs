@@ -93,5 +93,104 @@
         /// The <see cref="Task"/>.
         /// </returns>
         Task<ResponseType> DeleteNetworkDomain(Guid id);
-	}
+
+	    /// <summary>
+	    /// The get static routes.
+	    /// </summary>
+	    /// <param name="filteringOptions">
+	    /// The filtering options.
+	    /// </param>
+	    /// <param name="pagingOptions">
+	    /// The paging options.
+	    /// </param>
+	    /// <returns>
+	    /// The <see cref="Task"/>.
+	    /// </returns>
+	    Task<PagedResponse<StaticRouteType>> GetStaticRoutesPaginated(StaticRouteListOptions filteringOptions = null,
+		    PageableRequest pagingOptions = null);
+
+	    /// <summary>
+	    /// This function create a new custom static route.
+	    /// </summary>
+	    /// <param name="networkDomain">
+	    /// The network Domain.
+	    /// </param>
+	    /// <returns>
+	    /// Response containing status.
+	    /// </returns>
+	    Task<ResponseType> CreateStaticRoute(CreateStaticRouteType networkDomain);
+
+        /// <summary>
+        /// Delete the static route. 
+        /// </summary>
+        /// <param name="staticRouteId">
+        /// The identifier of the static route. 
+        /// </param>
+        /// <returns>
+        /// The <see cref="Task"/>.
+        /// </returns>
+        Task<ResponseType> DeleteStaticRoute(Guid staticRouteId);
+
+
+        /// <summary>
+        /// This function Restores Static Routes to System Static Route Values (erases all current routes).
+        /// </summary>
+        /// <param name="networkDomainId">
+        /// The network domain ID.
+        /// </param>
+        /// <returns>
+        /// Response containing status.
+        /// </returns>
+        Task<ResponseType> RestoreStaticRoute(Guid networkDomainId);
+
+	    /// <summary>
+	    /// The get snat exclusions.
+	    /// </summary>
+	    /// <param name="filteringOptions">
+	    /// The filtering options.
+	    /// </param>
+	    /// <param name="pagingOptions">
+	    /// The paging options.
+	    /// </param>
+	    /// <returns>
+	    /// The <see cref="Task"/>.
+	    /// </returns>
+	    Task<PagedResponse<SnatExclusionType>> GetSnatExclusionsPaginated(
+		    SnatExclusionListOptions filteringOptions = null, PageableRequest pagingOptions = null);
+
+	    /// <summary>
+	    /// Restores Snat exclusions.
+	    /// </summary>
+	    /// <param name="networkDomainId">
+	    /// The network domain ID.
+	    /// </param>
+	    /// <returns>
+	    /// Response containing status.
+	    /// </returns>
+	    Task<ResponseType> RestoreSnatExclusions(Guid networkDomainId);
+
+        /// <summary>
+        /// This function adds Snat exclusions.
+        /// </summary>
+        /// <param name="SNATExclusion">
+        /// The SNAT Exclusion.
+        /// </param>
+        /// <returns>
+        /// Response containing status.
+        /// </returns>
+        Task<ResponseType> AddSNATExclusion(AddSnatExclusionType SNATExclusion);
+
+        /// <summary>
+        /// Removes the SNAT exclusions. 
+        /// </summary>
+        /// <param name="SNATExclusionId">
+        /// The identifier of the SNAT Exclusion. 
+        /// </param>
+        /// <returns>
+        /// The <see cref="Task"/>.
+        /// </returns>
+        Task<ResponseType> RemoveSNATExclusion(Guid SNATExclusionId);
+
+
+    }
 }
